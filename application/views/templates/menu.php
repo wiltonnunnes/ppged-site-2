@@ -18,7 +18,7 @@
 	<nav class="navbar-custom">
 		<div class="container-custom">
 			<div class="navbar-custom-header">
-				<div class="barra-azul"></div><a class="navbar-custom-brand" id="logoufrn" title="Ir para a página inicial" href=""><img src="img/logo_ce.png">
+				<div class="barra-azul"></div><a class="navbar-custom-brand" id="logoufrn" title="Ir para a página inicial" href=""><?php echo img('img/logo_ce.png'); ?>
 					<span class="hidden-xs hidden-md hidden-lg">UNIVERSIDADE FEDERAL DO RIO GRANDE DO NORTE</span></a>
 				<div class="container-pesquisaXS hidden-md hidden-lg">
 					<div class="pesquisa collapse width" id="pesquisaXS" style="width:0">
@@ -47,12 +47,12 @@
 				</ul>
 				<ul class="nav navbar-custom-nav sub-itens" id="menuPesquisa">
 					<li class="divisor hidden-xs hidden-sm hidden-md"></li>
-					<li><a class="btn-search-menu" alt="Clique para" href="#" onclick="return false;"><i class="fa fa-search"></i><span class="hidden-xs hidden-sm hidden-md">Pesquisar</span></a></li>
+					<li><a class="btn-search-menu" alt="Clique para" href="#" onclick="return false;" data-toggle="modal" data-target="#myModal"><i class="fa fa-search"></i><span class="hidden-xs hidden-sm hidden-md">Pesquisar</span></a></li>
 				</ul>
 			</div>
 			<div class="navbar-custom-collapse collapse" id="idMenu">
 				<div class="title-name hidden-xs hidden-sm">
-					<h1> universidade federal do rio grande do norte</h1>
+					<h1> programa de pós-graduação em educação</h1>
 				</div>
 				<ul class="nav navbar-custom-nav" id="accordion"><span class="sr-only">Área do menu principal</span>
 					<li class="panel"><a href="#menuPrograma" data-toggle="collapse" data-parent="#accordion" role="button" aria-expanded="false"><span>Programa</span><span class="sr-only">Abrir/fechar sub-menu</span><i class="fa fa-angle-down pull-right"></i></a>
@@ -76,7 +76,7 @@
 							<li><a href="">Bancas</a></li>
 							<li><a href="">Reconhecimento de diplomas</a></li>
 							<li><a href="">Oferta de disciplina</a></li>
-							<li><a href="<?php echo base_url('arquivos/CALENDARIO DE MATRICULA 2020.1.pdf'); ?>">Calendários acadêmico</a></li>
+							<li><a href="<?php echo base_url('arquivos/CALENDARIO DE MATRICULA 2020.1.pdf'); ?>" target="_blank">Calendários acadêmico</a></li>
 						</ul>
 					</li>
 					<li class="panel"><a href="#menuIngresso" data-toggle="collapse" data-parent="#accordion" role="button" aria-expanded="false"><span>Formas de ingresso</span><span class="sr-only">Abrir/fechar sub-menu</span><i class="fa fa-angle-down pull-right"></i></a>
@@ -100,15 +100,15 @@
 					</li>
 					<li class="panel"><a href="#menuEventos" data-toggle="collapse" data-parent="#accordion" role="button" aria-expanded="false"><span>Eventos</span><span class="sr-only">Abrir/fechar sub-menu</span><i class="fa fa-angle-down pull-right"></i></a>
 						<ul class="navbar-custom-subnav collapse" id="menuEventos">
-							<li><a href="">Defesas de dissertações</a></li>
-							<li><a href="">Defesa de teses</a></li>
-							<li><a href="">Eventos Científicos</a></li>
-							<li><a href="">Outros</a></li>
+							<li><?php echo anchor('eventos', 'Defesas de dissertações'); ?></li>
+							<li><?php echo anchor('eventos', 'Defesa de teses'); ?></li>
+							<li><?php echo anchor('eventos', 'Eventos Científicos'); ?></li>
+							<li><?php echo anchor('eventos', 'Outros'); ?></li>
 						</ul>
 					</li>
 					<li class="panel"><a href="#menuPublicacoes" data-toggle="collapse" data-parent="#accordion" role="button" aria-expanded="false"><span>Pubicações</span><span class="sr-only">Abrir/fechar sub-menu</span><i class="fa fa-angle-down pull-right"></i></a>
 						<ul class="navbar-custom-subnav collapse" id="menuPublicacoes">
-							<li><a href="">Banco de dissertações e teses</a></li>
+							<li><a target="_blank" href="http://repositorio.ufrn.br:8080/jspui/handle/123456789/11945/simple-search?location=123456789%2F11945&query=&rpp=100&sort_by=dc.date.issued_dt&order=DESC&etal=0&submit_search=Atualizar">Banco de dissertações e teses</a></li>
 							<li><a href="">Periódicos</a></li>
 							<li><a href="">Livros</a></li>
 							<li><a href="">Conselho Editorial</a></li>
@@ -119,3 +119,16 @@
 		</div>
 	</nav>
 </header>
+<div class="modal" id="myModal">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-body">
+				<form class="form-inline w-100">
+					<i class="far fa-search"></i>
+					<input type="text" class="form-control mr-sm-2" placeholder="Digite sua busca">
+					<button type="submit" class="btn btn-primary">Buscar</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

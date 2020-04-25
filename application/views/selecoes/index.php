@@ -1,10 +1,11 @@
+<!-- sobre -->
 <section class="info-section">
 	<div class="container">
 		<div class="row">
 
 			<div class="col-md-4 col-lg-4">
 				<?php 
-					include (APPPATH. "views/templates/sideBar.php");	
+					include (APPPATH . "views/templates/sideBar.php");	
 				?>
 			</div>
 
@@ -26,13 +27,33 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        <?php foreach ($selecoes as $selecoes_item): ?>
+                                        <?php foreach($selecoes as $selecoes_item): ?>
                                             <tr>
-                                                <td><?php echo $selecoes_item['selecoes_id']; ?></td>
-                                                <td><?php echo anchor('selecoes/' . $selecoes_item['selecoes_id'], $selecoes_item['titulo']); ?></td> 
-                                                <td><?php echo $selecoes_item['ano']; ?></td>
+                                                <td>1</td>
+                                                <td><a href="https://drive.google.com/file/d/1dZ653d0_yUqdx6EX-ufNZmmW6SfbW_W6/view">MESTRADO E DOUTORADO 2019</a></td> 
+                                                <td>2019.1</td>
                                             </tr>
-                                        <?php endforeach; ?>
+                                        <?php endforeach: ?>
+                                            <tr>
+                                                <td>2</td>
+                                                <td><a href="http://www.ppged.ufrn.br/processo_seletivo_2018.php">MESTRADO E DOUTORADO 2018</a></td> 
+                                                <td>2018.1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td><a href="#">MESTRADO E DOUTORADO 2017</a></td> 
+                                                <td>2017.1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td><a href="#">MESTRADO E DOUTORADO 2016</a></td> 
+                                                <td>2016.1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td><a href="#">MESTRADO E DOUTORADO 2015</a></td> 
+                                                <td>2015.1</td>
+                                            </tr>
                                         </tbody>
                                         <tfoot>
                                             <tr>
@@ -53,18 +74,3 @@
 		</div>
 	</div>
 </section>
-
-<script>
-    $(document).ready(function(){
-        $('#example').DataTable({
-            "language": {
-                "lengthMenu": "Mostrando _MENU_ registros por página",
-                "zeroRecords": "Nada encontrado",
-                "info": "Mostrando página _PAGE_ de _PAGES_",
-                "infoEmpty": "Nenhum registro disponível",
-                "infoFiltered": "(filtrado de _MAX_ registros no total)",
-                "sSearch" : "Pesquisar"
-            }
-        });
-    });
-</script>

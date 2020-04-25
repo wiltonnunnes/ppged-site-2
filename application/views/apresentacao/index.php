@@ -2,18 +2,12 @@
 	<div class="container">
 		<div class="row">
 
-			<div class="col-md-4 col-lg-4">
-				<?php 
-					include (APPPATH . "views/templates/sideBar.php");	
-				?>
-			</div>
-
 			<div class="col-md-8 col-lg-8">
 				<div class="content" style="width:100%">
 					<div id="jquery-accordion-menu" class="jquery-accordion-menu" style="width:100%">
-						<div class="jquery-accordion-menu-header">Apresentação</div>
 				
 						<div class="container">
+							<h1 class="text-primary">Apresentação</h1>
 							<div class="row">
 								<div class="col-md-12 col-lg-12 mt-2">
 									<p align="justify">			

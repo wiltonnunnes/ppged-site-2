@@ -31,7 +31,7 @@
                                         <?php foreach ($editais as $editais_item): ?>
                                             <tr>
                                                 <td><?php echo $editais_item['edital_id']; ?></td>
-                                                <td><a href="http://www.ppged.ufrn.br/uploads/arquivos/editais/Edital%20retificado%2023.07.19.pdf"><?php echo $editais_item['titulo']; ?></a></td> 
+                                                <td><a href="<?php echo base_url('uploads/arquivos/editais/'. $editais_item['arquivo']); ?>"><?php echo $editais_item['titulo']; ?></a></td> 
                                                 <td>
                                                     <?php
                                                     $date = date_create($editais_item['data']);

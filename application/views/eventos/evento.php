@@ -11,17 +11,27 @@
 			<div class="col-md-8 col-lg-8">
                 <div class="content" style="width:100%">
                     <div id="jquery-accordion-menu" class="jquery-accordion-menu" style="width:100%">                       
-                        <div class="jquery-accordion-menu-header"><?php echo $evento['nome_evento']; ?></div>
+                        <h1><?php echo $evento['nome_evento']; ?></h1>
 
-                            <p>Data do evento: <?php echo date_format(date_create($evento['data']), 'd/m/Y'); ?></p>
-                            <p>Local: <?php echo $evento['local']; ?></p>
-                            <p>Entidade(s) organizadora(s): <?php echo $evento['entidade_organizadora']; ?></p>
+                            <p><i class="far fa-calendar"></i> <?php setlocale(LC_ALL, NULL); echo strftime('%#d de %B de %Y', strtotime($evento['data'])); ?></p>
+                            <p><i class="fas fa-map-marker-alt"></i> <?php echo $evento['local']; ?></p>
 
-                            <?php if (!is_null($evento['cartaz'])): ?>
-                            <div class="embed-responsive embed-responsive-1by1">
-                                <embed class="embed-responsive-item" src="<?php echo base_url('uploads/arquivos/eventos/' . $evento['cartaz']); ?>"></embed>
+                            <?php 
+                            if($evento['cartaz']) {
+                                if(pathinfo($evento['cartaz'], PATHINFO_EXTENSION) == 'pdf') {
+                            ?>
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <embed src="<?php echo base_url('uploads/arquivos/eventos/' . $evento['cartaz']); ?>" type="application/pdf" class="embed-responsive-item"></embed>
                             </div>
-                            <?php endif; ?>
+                            <?php
+                                } else {
+                                    echo img(['src' => 'uploads/arquivos/eventos/' . $evento['cartaz'], 'class' => 'img-responsive']);
+                                }
+                            }
+                            if($evento['descricao']) {
+                                echo $evento['descricao'];
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>

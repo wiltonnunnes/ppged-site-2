@@ -36,12 +36,12 @@
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
 					<ul class="list-unstyled list-inline social text-center">
-						<li class="list-inline-item"><a href=""><img src="img/logo_ufrn_white.png" width="90"/></li>
-						<li class="list-inline-item"><a href=""><img src="img/capes_logo.png" width="60"/></a></li>
-						<li class="list-inline-item"><a href=""><img src="img/Cnpq-logo.png" width="100"/></a></li>
-						<li class="list-inline-item"><a href=""><img src="img/logoSigaa.png" width="90"/></a></li>
-						<li class="list-inline-item"><a href="" target="_blank"><img src="img/logo_bczm.png" width="60"/></a></li>
-						<li class="list-inline-item"><a href="" target="_blank"><img src="img/logo-revista.png" width="110"/></a></li>
+						<li class="list-inline-item"><a href=""><?php echo img(array('src' => 'img/logo_ufrn_white.png', 'width' => '90')); ?></a></li>
+						<li class="list-inline-item"><a href=""><?php echo img(array('src' => 'img/capes_logo.png', 'width' => '60')); ?></a></li>
+						<li class="list-inline-item"><a href=""><?php echo img(array('src' => 'img/Cnpq-logo.png', 'width' => '100')); ?></a></li>
+						<li class="list-inline-item"><a href=""><?php echo img(array('src' => 'img/logoSigaa.png', 'width' => '90')); ?></a></li>
+						<li class="list-inline-item"><a href="" target="_blank"><?php echo img(array('src' => 'img/logo_bczm.png', 'width' => '60')); ?></a></li>
+						<li class="list-inline-item"><a href="" target="_blank"><?php echo img(array('src' => 'img/logo-revista.png', 'width' => '110')); ?></a></li>
 					</ul>
 				</div>
 				</hr>
