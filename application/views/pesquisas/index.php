@@ -27,7 +27,7 @@
                                     foreach ($pesquisas[$i]['professores'] as $professores_item) {
 										array_push($links, anchor($professores_item['lattes'], $professores_item['nome']));
 									}
-                                    echo implode(", ", $links) . '.';
+                                    echo implode("; ", $links) . '.';
                                     ?>
                                     </p>
                                     

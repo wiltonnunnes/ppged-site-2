@@ -10,7 +10,7 @@ class Noticias_anpae extends MY_Controller {
 		if (is_null($id)) {
 			$config['base_url'] = site_url('noticias_anpae');
 			//$config['total_rows'] = $this->noticias_anpae_model->get_count();
-			$config['per_page'] = 5;
+			$config['per_page'] = 6;
 
 			$page = ($this->input->get('page')) ?: 1;
 			$titulo = $this->input->get('titulo');

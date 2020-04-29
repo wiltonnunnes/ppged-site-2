@@ -13,8 +13,8 @@
                     <div id="jquery-accordion-menu" class="jquery-accordion-menu" style="width:100%">                       
                         <h1><?php echo $evento['nome_evento']; ?></h1>
 
-                            <p><i class="far fa-calendar"></i> <?php setlocale(LC_ALL, NULL); echo strftime('%#d de %B de %Y', strtotime($evento['data'])); ?></p>
-                            <p><i class="fas fa-map-marker-alt"></i> <?php echo $evento['local']; ?></p>
+                            <p class="text-muted size_p"><i class="far fa-calendar"></i> <?php setlocale(LC_ALL, NULL); echo strftime('%#d de %B de %Y', strtotime($evento['data'])); ?></p>
+                            <p class="text-muted size_p"><i class="fas fa-map-marker-alt"></i> <?php echo $evento['local']; ?></p>
 
                             <?php 
                             if($evento['cartaz']) {

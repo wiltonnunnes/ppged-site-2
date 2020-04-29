@@ -10,7 +10,7 @@ class Informativos extends MY_Controller {
 		if (is_null($id)) {
 			$config['base_url'] = site_url('informativos');
 			//$config['total_rows'] = $this->informativos_model->get_count();
-			$config['per_page'] = 5;
+			$config['per_page'] = 4;
 
 			$page = ($this->input->get('page')) ?: 1;
 			$titulo = $this->input->get('titulo');

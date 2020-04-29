@@ -3,44 +3,31 @@
 	<div class="container">
 		<div class="row">
 
-			<div class="col-md-4 col-lg-4">
-				<?php 
-					include (APPPATH. "views/templates/sideBar.php");	
-				?>
-			</div>
 
 			<div class="col-md-8 col-lg-8">
 			    <div class="content" style="width:100%">
                     <div id="jquery-accordion-menu" class="jquery-accordion-menu" style="width:100%">
-                        <div class="jquery-accordion-menu-header">Docentes</div>
+                        <h1>Docentes</h1>
                         <div class="container">
-                        <?php for ($i = 0; $i < count($professores); $i += 2): ?>
-                            <div class="row">
-                            <?php 
-                            for ($j = $i; $j <= $i + 1; $j++) {
-                            	if ($j == count($professores)) break;
-                            ?>
-                                <div class="col-md-6 col-lg-6 mt-2">
-                                    <h1 class="nome_docente"><?php echo $professores[$j]['nome']; ?></h1>
-                                    <ul class="atributos_professores">
-                                        <li>
-                                            <spam class="bold">Título:</spam> <?php echo $professores[$j]['titulo']; ?>
-                                        </li>
-                                        <li>
-                                            <spam class="bold">E-mail:</spam> <?php echo $professores[$j]['email']; ?>
-                                        </li>
-                                        <li style="background-color:white">
-                                            <spam class="bold"> Curriculum Lattes:</spam> <a href="<?php echo $professores[$j]['lattes']; ?>" style="background-color:white; color:black; padding:0px"><?php echo $professores[$j]['lattes']; ?></a>
-                                        </li>
-                                        <li>
-                                            <spam class="bold"> Página do SIGAA:</spam><a href="<?php echo $professores[$j]['sigaa']; ?>"  style="background-color:white; color:black; padding:0px"><?php echo $professores[$j]['sigaa']; ?></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            <?php } ?>
-                            </div>    
-                            <hr>
-                        <?php endfor; ?>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Nome</th>
+                                        <th>Email</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <?php foreach ($professores as $professores_item): ?>
+                                    <tr>
+                                        <td>
+                                            <p><a href="#" data-toggle="modal" data-target="#teste"><?php echo $professores_item['nome']; ?></a></p>
+                                            <p><?php echo $professores_item['titulo']; ?></p>    
+                                        </td>
+                                        <td><?php echo $professores_item['email']; ?></td>
+                                    </tr>
+                                <?php endforeach; ?>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
 		        </div>
@@ -50,3 +37,25 @@
 		</div>
 	</div>
 </section>
+<div id="teste" class="modal modal-lg" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+    function load_content_in_modal(id) {
+
+    }
+</script>
