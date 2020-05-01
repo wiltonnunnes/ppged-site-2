@@ -56,9 +56,9 @@
                         <div class="col-md-4 gedf-main">
                             <!--<div class="card gedf-card">-->
                                 <!--<div class="card-body">-->
-                            <p class="text-muted size_p" style="margin-top:9%; margin-bottom:0px;"><i class="far fa-calendar"></i> <?php setlocale(LC_ALL, NULL); echo strftime('%#d de %B de %Y', strtotime($noticias_anpae_item['data'])); ?></p>
+                            <p class="text-muted size_p" style="margin-bottom:0px;"><i class="fa fa-calendar"></i> <?php setlocale(LC_ALL, NULL); echo strftime('%#d de %B de %Y', strtotime($noticias_anpae_item['data'])); ?></p>
                             <a class="card-link" href="<?php echo site_url('informativos/' . $noticias_anpae_item['noticia_id']); ?>">
-                                <h2 class="card-title"><?php echo $noticias_anpae_item['titulo']; ?></h2>
+                                <h2 class="card-title text-primary" style="margin-top: .25rem; margin-bottom: 3rem;"><?php echo $noticias_anpae_item['titulo']; ?></h2>
                             </a>
                                   <!--  
                                 </div>
@@ -84,7 +84,7 @@
 
             <div class="col-md-4 gedf-main hidden-xs">
                 <form class="form-inline mt-5 ml-3" action="<?php echo site_url('noticias'); ?>">
-                    <div class="input-group">
+                    <div class="input-group input-group-lg">
                         <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" placeholder="Buscar Notícia" size="25%" name="titulo">
                         <div class="input-group-btn">
                             <button class="btn btn-default" type="submit" id="button-addon2">

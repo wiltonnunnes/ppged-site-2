@@ -20,9 +20,9 @@ class Publicacoes extends MY_Controller {
 			$page = ($this->input->get('page')) ?: 1;
 			$data['publicacoes'] = $this->publicacoes_model->get(array(), $config['per_page'], ($page - 1) * $config['per_page']);
 			*/
-			$anos = $this->publicacoes_model->get_anos();
-			$data['publicacoes'] = $this->publicacoes_model->get(array('ano' => $anos[array_key_first($anos)]));
-			$data['anos'] = $anos;
+			/*$anos = $this->publicacoes_model->get_anos();*/
+			$data['publicacoes'] = $this->publicacoes_model->get();
+			/*$data['anos'] = $anos;*/
 
 			$this->load->view('templates/header');
 			$this->load->view('templates/menu');

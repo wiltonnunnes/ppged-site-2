@@ -98,4 +98,9 @@ class Professores extends MY_Controller {
 		$data = $this->professores_model->search($this->input->get('q'));
 		echo json_encode($data);
 	}
+
+	public function get_professor() {
+		$professor = $this->professores_model->get_by_id($this->input->get('professor_id'));
+		echo json_encode($professor);
+	}
 }

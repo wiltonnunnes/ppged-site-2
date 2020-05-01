@@ -12,7 +12,7 @@
             <div class="col-md-4 gedf-main visible-xs">
                 <form class="form-inline mt-5 ml-3" action="<?php echo site_url('eventos'); ?>">
                     <div class="input-group input-group-lg">
-                        <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" placeholder="Buscar Notícia" size="25%" name="titulo">
+                        <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" placeholder="Buscar Evento" size="25%" name="titulo">
                         <div class="input-group-btn">
                             <button class="btn btn-default" type="submit" id="button-addon2">
                                 <i class="fa fa-search"></i>
@@ -35,9 +35,9 @@
                     ?>
                         
                         <div class="col-md-4 gedf-main">
-                            <p class="text-muted h7 mb-2"><i class="far fa-calendar"></i> <?php setlocale(LC_ALL, NULL); echo strftime('%#d de %B de %Y', strtotime($eventos_item['data'])); ?></p>
+                            <p class="text-muted size_p"><i class="fa fa-calendar"></i> <?php setlocale(LC_ALL, NULL); echo strftime('%#d de %B de %Y', strtotime($eventos_item['data'])); ?></p>
                             <a class="card-link" href="<?php echo site_url('eventos/' . $eventos_item['evento_id']); ?>">
-                                <h2 class="card-title"><?php echo $eventos_item['nome_evento']; ?></h2>
+                                <h2 class="card-title text-primary" style="margin-top: .25rem; margin-bottom: 3rem;"><?php echo $eventos_item['nome_evento']; ?></h2>
                             </a>
                         </div>
 
@@ -55,8 +55,8 @@
 
             <div class="col-md-4 gedf-main hidden-xs">
                 <form class="form-inline mt-5 ml-3" action="<?php echo site_url('eventos'); ?>">
-                    <div class="input-group">
-                        <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" placeholder="Buscar Notícia" size="25%" name="titulo">
+                    <div class="input-group input-group-lg">
+                        <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" placeholder="Buscar Evento" size="25%" name="titulo">
                         <div class="input-group-btn">
                             <button class="btn btn-default" type="submit" id="button-addon2">
                                 <i class="fa fa-search"></i>
