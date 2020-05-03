@@ -7,8 +7,8 @@
 				<div class="col-xs-12 col-sm-3 col-md-3">
 					<h5>Links Rápidos</h5>
 					<ul class="list-unstyled quick-links">
-						<li><a href="index.php"><i class="fa fa-angle-double-right"></i>Início</a></li>
-						<li><a href="sobre.php"><i class="fa fa-angle-double-right"></i>Notícias</a></li>
+						<li><a href="<?php echo site_url(); ?>"><i class="fa fa-angle-double-right"></i>Início</a></li>
+						<li><a href="<?php echo site_url('noticias'); ?>"><i class="fa fa-angle-double-right"></i>Notícias</a></li>
 						<li><a href="todasNoticias.php"><i class="fa fa-angle-double-right"></i>Agenda</a></li>
 						<li><a href="contato.php"><i class="fa fa-angle-double-right"></i>Contato</a></li>
 					</ul>
@@ -16,11 +16,11 @@
 				<div class="col-xs-12 col-sm-3 col-md-3">
 					<h5>O Programa</h5>
 					<ul class="list-unstyled quick-links">
-						<li><a href="http://www.ufrn.br/"><i class="fa fa-angle-double-right"></i>Apresentação</a></li>
-						<li><a href="https://sigaa.ufrn.br/sigaa/public/home.jsf"><i class="fa fa-angle-double-right"></i>Docentes</a></li>
-						<li><a href="http://www.sistemas.ufrn.br/download/sigaa/public/calendario_universitario.pdf"><i class="fa fa-angle-double-right"></i>Linhas de Pesquisas</a></li>
+						<li><a href="<?php echo site_url('apresentacao'); ?>"><i class="fa fa-angle-double-right"></i>Apresentação</a></li>
+						<li><a href="<?php echo site_url('professores'); ?>"><i class="fa fa-angle-double-right"></i>Docentes</a></li>
+						<li><a href="<?php echo site_url('pesquisas'); ?>"><i class="fa fa-angle-double-right"></i>Linhas de Pesquisas</a></li>
 						<li><a href="http://www.ufrn.br/servicos#sistemasintegrados"><i class="fa fa-angle-double-right"></i>Banco de Teses e Dissertações</a></li>
-						<li><a href="http://www.ufrn.br/servicos#sistemasintegrados"><i class="fa fa-angle-double-right"></i>Publicações</a></li>
+						<li><a href="<?php echo site_url('publicacoes'); ?>"><i class="fa fa-angle-double-right"></i>Publicações</a></li>
 						<li><a href="http://www.ufrn.br/servicos#sistemasintegrados"><i class="fa fa-angle-double-right"></i>Cursos</a></li>
 					</ul>
 				</div>

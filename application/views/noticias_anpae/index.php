@@ -57,7 +57,7 @@
                             <!--<div class="card gedf-card">-->
                                 <!--<div class="card-body">-->
                             <p class="text-muted size_p" style="margin-bottom:0px;"><i class="fa fa-calendar"></i> <?php setlocale(LC_ALL, NULL); echo strftime('%#d de %B de %Y', strtotime($noticias_anpae_item['data'])); ?></p>
-                            <a class="card-link" href="<?php echo site_url('informativos/' . $noticias_anpae_item['noticia_id']); ?>">
+                            <a class="card-link" href="<?php echo site_url('noticias/' . $noticias_anpae_item['noticia_id']); ?>">
                                 <h2 class="card-title text-primary" style="margin-top: .25rem; margin-bottom: 3rem;"><?php echo $noticias_anpae_item['titulo']; ?></h2>
                             </a>
                                   <!--  
