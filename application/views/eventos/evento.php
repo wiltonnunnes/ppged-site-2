@@ -2,11 +2,7 @@
 	<div class="container">
 		<div class="row">
 
-			<div class="col-md-4 col-lg-4">
-				<?php 
-					include (APPPATH. "views/templates/sideBar.php");	
-				?>
-			</div>
+			
 
 			<div class="col-md-8 col-lg-8">
                 <div class="content" style="width:100%">
@@ -34,6 +30,12 @@
                         ?>
                     </div>
                 </div>
+            </div>
+
+            <div class="col-md-4 col-lg-4">
+                <?php 
+                    include (APPPATH. "views/templates/sideBar.php");   
+                ?>
             </div>
 		</div>
 	</div>

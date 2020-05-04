@@ -75,6 +75,7 @@ $route['eventos/(:num)'] = 'eventos/index/$1';
 $route['informativos/(:num)'] = 'informativos/index/$1';
 $route['noticias/(:num)'] = 'noticias_anpae/index/$1';
 $route['professores/(:num)'] = 'professores/index/$1';
+$route['publicacoes/(:num)'] = 'publicacoes/index/$1';
 $route['selecoes/(:num)'] = 'selecoes/index/$1';
 
 $route['painel_controle'] = 'usuarios';

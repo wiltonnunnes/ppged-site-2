@@ -21,7 +21,7 @@ class Publicacoes extends MY_Controller {
 			$data['publicacoes'] = $this->publicacoes_model->get(array(), $config['per_page'], ($page - 1) * $config['per_page']);
 			*/
 			$anos = $this->publicacoes_model->get_anos();
-			$data['publicacoes'] = $this->publicacoes_model->get();
+			$data['publicacoes'] = $this->publicacoes_model->get(['ano' => $anos[array_key_first($anos)]]);
 			$data['anos'] = $anos;
 
 			$this->load->view('templates/header');
