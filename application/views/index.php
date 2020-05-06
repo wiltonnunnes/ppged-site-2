@@ -47,20 +47,26 @@
 						</a>
 					</div>
 					<ul class="pl-5">
+						<?php
+						$informativo = array_shift($informativos);
+						?>
 						<li>
-							<a href="post/1" target="_blank" style="color: white"><i class="fa fa-file fa-white" aria-hidden="true"></i>
+							<a href="<?php echo site_url(['informativos', $informativo['informativo_id']]); ?>" target="_blank" style="color: white"><i class="fa fa-file fa-white" aria-hidden="true"></i>
 								<span class="list-content">
-									<strong>NOTÍCIA</strong>
-									<br>Data (Ex.: 25/12/2020)
+									<strong><?php echo mb_strtoupper(html_entity_decode($informativo['categoria'])); ?></strong>
+									<br>Data (Ex.: <?php echo date_format(date_create($informativo['data']), "d/m/Y"); ?>)
 								</span></a>
 						</li>
+						<?php foreach($informativos as $informativos_item): ?>
 						<li>
-							<a href="#" target="_blank"><i class="fa fa-file fa-white" aria-hidden="true"></i></a>
+							<a href="<?php echo site_url(['informativos', $informativos_item['informativo_id']]); ?>" target="_blank"><i class="fa fa-file fa-white" aria-hidden="true"></i></a>
 							<span class="list-content">
-								<strong>ALUNOS ESPECIAIS</strong>
-								<br>Data (Ex.: 25/12/2020)
+								<strong><?php echo mb_strtoupper(html_entity_decode($informativos_item['categoria'])); ?></strong>
+								<br>Data (Ex.: <?php echo date_format(date_create($informativos_item['data']), "d/m/Y"); ?>)
 							</span>
 						</li>
+						<?php endforeach; ?>
+						<!--
 						<li>
 							<a href="#" target="_blank"><i class="fa fa-file fa-white" aria-hidden="true"></i></a>
 							<span class="list-content">
@@ -82,10 +88,11 @@
 								<br>Data (Ex.: 25/12/2020)	
 							</span>
 						</li>
+						-->
 					</ul>
 				</div>
 				<div class="col-md-6 p-0 m-0">
-					<img src="img/ce.jpg" class="img-responsive d-none d-md-block" style="height:640px; width:100%;">
+					<img src="<?php echo base_url('img/ce.jpg'); ?>" class="img-responsive d-none d-md-block" style="height:640px; width:100%;">
 				</div>
 			</div>
 	</section>
@@ -123,7 +130,7 @@
 
 			<div class="row mbr-justify-content-center">
 				<div class="col-lg-6 mbr-col-md-10">
-					<a href="O Programa/apresentacao.php">
+					<a href="<?php echo site_url('apresentacao'); ?>">
 						<div class="wrap">
 							<div class="ico-wrap">
 								<span class="mbr-iconfont fa-volume-up fa"></span>

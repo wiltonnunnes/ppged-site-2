@@ -22,3 +22,4 @@ $lang['menu_exchanges'] = 'EXCHANGES';
 $lang['menu_national_agreements'] = 'NATIONAL AGREEMENTS';
 $lang['menu_international_agreements'] = 'INTERNATIONAL AGREEMENTS';
 $lang['menu_auditoriums'] = 'Auditoriums';
+$lang['menu_news'] = 'News';

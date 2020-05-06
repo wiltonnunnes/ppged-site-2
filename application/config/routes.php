@@ -53,6 +53,8 @@ $route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+$route['contato'] = 'pages/view/contato';
+
 $route['apresentacao'] = 'apresentacao';
 $route['auditorios'] = 'auditorios';
 $route['convenios_nacionais'] = 'conveniosNacionais';
@@ -62,6 +64,7 @@ $route['eventos'] = 'eventos';
 $route['formularios'] = 'formularios';
 $route['informativos'] = 'informativos';
 $route['intercambios'] = 'intercambios';
+$route['language'] = 'language';
 $route['noticias'] = 'noticias_anpae';
 $route['pesquisas'] = 'pesquisas';
 $route['professores'] = 'professores';

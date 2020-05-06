@@ -32,7 +32,7 @@ class Publicacoes_model extends MY_Model {
 
 		$anos = array();
 		foreach ($query->result_array() as $row) {
-			$anos[$row['ano']] = $row['ano'];
+			array_push($anos, $row['ano']);
 		}
 		return $anos;
 	}

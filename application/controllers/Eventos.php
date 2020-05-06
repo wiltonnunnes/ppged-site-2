@@ -17,6 +17,7 @@ class Eventos extends MY_Controller {
 			$data['links'] = $this->pagination->create_links();
 
 			$page = ($this->input->get('page')) ?: 1;
+			$str = 
 			$data['eventos'] = $this->eventos_model->get(array(), $config['per_page'], ($page - 1) * $config['per_page']);
 
 			$this->load->view('templates/header');

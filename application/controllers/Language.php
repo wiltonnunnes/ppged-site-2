@@ -1,5 +1,5 @@
 <?php
-class Lang_controller extends MY_Controller {
+class Language extends MY_Controller {
 	
 	public function index() {
 		$locale = $this->input->get('locale');
@@ -17,6 +17,8 @@ class Lang_controller extends MY_Controller {
 				break;
 		}
 
-		redirect();
+		$uri = $this->agent->is_referral() ? '' : $this->agent->referrer();
+		$uri = str_replace('?' . parse_url($uri, PHP_URL_QUERY), '', $uri);
+		redirect($uri . '?locale=' . $locale); 
 	}
 }

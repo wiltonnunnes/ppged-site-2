@@ -10,11 +10,11 @@
         <div class="row">
 
             <div class="col-md-4 gedf-main visible-xs">
-                <form class="form-inline mt-5 ml-3" action="<?php echo site_url('eventos'); ?>">
+                <form class="form-inline mt-5 ml-3" action="<?php echo site_url('eventos'); ?>" method="post">
                     <div class="input-group input-group-lg">
                         <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" placeholder="Buscar Evento" size="25%" name="titulo">
                         <div class="input-group-btn">
-                            <button class="btn btn-default" type="submit" id="button-addon2">
+                            <button class="btn btn-default search-button" type="submit" id="button-addon2">
                                 <i class="fa fa-search"></i>
                             </button>
                         </div>

@@ -7,21 +7,21 @@
 				<div class="col-xs-12 col-sm-3 col-md-3">
 					<h5>Links Rápidos</h5>
 					<ul class="list-unstyled quick-links">
-						<li><a href="<?php echo site_url(); ?>"><i class="fa fa-angle-double-right"></i>Início</a></li>
-						<li><a href="<?php echo site_url('noticias'); ?>"><i class="fa fa-angle-double-right"></i>Notícias</a></li>
+						<li><a href="<?php echo site_url(); ?>"><i class="fa fa-angle-double-right"></i><?php echo lang('menu_home'); ?></a></li>
+						<li><a href="<?php echo site_url('noticias'); ?>"><i class="fa fa-angle-double-right"></i><?php echo lang('menu_news'); ?></a></li>
 						<li><a href="todasNoticias.php"><i class="fa fa-angle-double-right"></i>Agenda</a></li>
-						<li><a href="contato.php"><i class="fa fa-angle-double-right"></i>Contato</a></li>
+						<li><a href="<?php echo site_url('contato'); ?>"><i class="fa fa-angle-double-right"></i>Contato</a></li>
 					</ul>
 				</div>
 				<div class="col-xs-12 col-sm-3 col-md-3">
 					<h5>O Programa</h5>
 					<ul class="list-unstyled quick-links">
-						<li><a href="<?php echo site_url('apresentacao'); ?>"><i class="fa fa-angle-double-right"></i>Apresentação</a></li>
-						<li><a href="<?php echo site_url('professores'); ?>"><i class="fa fa-angle-double-right"></i>Docentes</a></li>
-						<li><a href="<?php echo site_url('pesquisas'); ?>"><i class="fa fa-angle-double-right"></i>Linhas de Pesquisas</a></li>
-						<li><a href="http://www.ufrn.br/servicos#sistemasintegrados"><i class="fa fa-angle-double-right"></i>Banco de Teses e Dissertações</a></li>
-						<li><a href="<?php echo site_url('publicacoes'); ?>"><i class="fa fa-angle-double-right"></i>Publicações</a></li>
-						<li><a href="http://www.ufrn.br/servicos#sistemasintegrados"><i class="fa fa-angle-double-right"></i>Cursos</a></li>
+						<li><a href="<?php echo site_url('apresentacao'); ?>"><i class="fa fa-angle-double-right"></i><?php echo lang('menu_about'); ?></a></li>
+						<li><a href="<?php echo site_url('professores'); ?>"><i class="fa fa-angle-double-right"></i><?php echo lang('menu_teachers'); ?></a></li>
+						<li><a href="<?php echo site_url('pesquisas'); ?>"><i class="fa fa-angle-double-right"></i><?php echo lang('menu_research_lines'); ?></a></li>
+						<li><a href="http://www.ufrn.br/servicos#sistemasintegrados"><i class="fa fa-angle-double-right"></i><?php echo lang('menu_bank_of_theses_and_dissertations'); ?></a></li>
+						<li><a href="<?php echo site_url('publicacoes'); ?>"><i class="fa fa-angle-double-right"></i><?php echo lang('menu_publications'); ?></a></li>
+						<li><a href="http://www.ufrn.br/servicos#sistemasintegrados"><i class="fa fa-angle-double-right"></i><?php echo lang('menu_courses'); ?></a></li>
 					</ul>
 				</div>
 				<div class="col-xs-12 col-sm-3 col-md-3">
@@ -49,7 +49,7 @@
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
 					<p class="h6">&copy Todos os direitos reservados.<a class="ml-2" href="http://www.ce.ufrn.br/" target="_blank"></a></p>
-					<p class="h3_footer">Desenvolvido pelo <a class="ml-2" href="http://www.ce.ufrn.br/" target="_blank"><img class="img-fluid" id="imgFooter" src="img/logo_ce_white.png" alt="" ></a></p>
+					<p class="h3_footer">Desenvolvido pelo <a class="ml-2" href="http://www.ce.ufrn.br/" target="_blank"><img class="img-fluid" id="imgFooter" src="<?php echo base_url('img/logo_ce_white.png'); ?>" alt="" ></a></p>
 				</div>
 				</hr>
 			</div>	

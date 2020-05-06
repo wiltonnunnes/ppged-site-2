@@ -29,8 +29,8 @@
 			<div class="box-subitens">
 				<ul class="nav navbar-custom-nav sub-itens colapse hidden-xs hidden-sm hidden-md">
 					<li><i class="fa fa-globe"></i></li>
-					<li class="idiomas ativo"><a title="Ir para versão em Português" href="/">PT</a></li>
-					<li><a title="Go to the version in English" href="en">en</a></li>
+					<li class="idiomas ativo"><a title="Ir para versão em Português" href="<?php echo site_url('language?locale=pt') ?>">PT</a></li>
+					<li><a title="Go to the version in English" href="<?php echo site_url('language?locale=en') ?>">en</a></li>
 					<li><a title="Ir para la versión en Español" href="es">es</a></li>
 					<li><a title="Aller à la version en Anglais" href="fr">fr</a></li>
 				</ul>
@@ -57,10 +57,10 @@
 				<ul class="nav navbar-custom-nav" id="accordion"><span class="sr-only">Área do menu principal</span>
 					<li class="panel"><a href="#menuPrograma" data-toggle="collapse" data-parent="#accordion" role="button" aria-expanded="false"><span>Programa</span><span class="sr-only">Abrir/fechar sub-menu</span><i class="fa fa-angle-down pull-right"></i></a>
 						<ul class="navbar-custom-subnav collapse" id="menuPrograma">
-							<li><?php echo anchor('apresentacao', 'Apresentação'); ?></li>
+							<li><?php echo anchor('apresentacao', lang('menu_about')); ?></li>
 							<li><a href="">Equipe administrativa</a></li>
-							<li><?php echo anchor('professores', 'Docentes'); ?></li>
-							<li><?php echo anchor('pesquisas', 'Linha de pesquisa'); ?></li>
+							<li><?php echo anchor('professores', lang('menu_teachers')); ?></li>
+							<li><?php echo anchor('pesquisas', lang('menu_research_lines')); ?></li>
 							<li><a href="">Colegiado</a></li>
 							<li><a href="">Infraestrutura</a></li>
 							<li><a href="">Bolsas</a></li>
@@ -76,7 +76,7 @@
 							<li><a href="">Bancas</a></li>
 							<li><a href="">Reconhecimento de diplomas</a></li>
 							<li><a href="">Oferta de disciplina</a></li>
-							<li><a href="<?php echo base_url('arquivos/CALENDARIO DE MATRICULA 2020.1.pdf'); ?>" target="_blank">Calendários acadêmico</a></li>
+							<li><a href="<?php echo base_url('arquivos/CALENDARIO DE MATRICULA 2020.1.pdf'); ?>" target="_blank"><?php echo lang('menu_registration_calendar'); ?></a></li>
 						</ul>
 					</li>
 					<li class="panel"><a href="#menuIngresso" data-toggle="collapse" data-parent="#accordion" role="button" aria-expanded="false"><span>Formas de ingresso</span><span class="sr-only">Abrir/fechar sub-menu</span><i class="fa fa-angle-down pull-right"></i></a>
@@ -87,7 +87,7 @@
 							<li><a href="">Cotutela</a></li>
 						</ul>
 					</li>
-					<li class="panel"><a href="#menuEditais" data-toggle="collapse" data-parent="#accordion" role="button" aria-expanded="false"><span>Editais</span><span class="sr-only">Abrir/fechar sub-menu</span><i class="fa fa-angle-down pull-right"></i></a>
+					<li class="panel"><a href="#menuEditais" data-toggle="collapse" data-parent="#accordion" role="button" aria-expanded="false"><span><?php echo lang('menu_notices'); ?></span><span class="sr-only">Abrir/fechar sub-menu</span><i class="fa fa-angle-down pull-right"></i></a>
 						<ul class="navbar-custom-subnav collapse" id="menuEditais">
 							<li><a href="">Seleção de aluno regular</a></li>
 							<li><a href="">Reingresso de aluno regular</a></li>
@@ -98,7 +98,7 @@
 							<li><a href="">Outros</a></li>
 						</ul>
 					</li>
-					<li class="panel"><a href="#menuEventos" data-toggle="collapse" data-parent="#accordion" role="button" aria-expanded="false"><span>Eventos</span><span class="sr-only">Abrir/fechar sub-menu</span><i class="fa fa-angle-down pull-right"></i></a>
+					<li class="panel"><a href="#menuEventos" data-toggle="collapse" data-parent="#accordion" role="button" aria-expanded="false"><span><?php echo lang('menu_events'); ?></span><span class="sr-only">Abrir/fechar sub-menu</span><i class="fa fa-angle-down pull-right"></i></a>
 						<ul class="navbar-custom-subnav collapse" id="menuEventos">
 							<li><?php echo anchor('eventos', 'Defesas de dissertações'); ?></li>
 							<li><?php echo anchor('eventos', 'Defesa de teses'); ?></li>
@@ -106,7 +106,7 @@
 							<li><?php echo anchor('eventos', 'Outros'); ?></li>
 						</ul>
 					</li>
-					<li class="panel"><a href="#menuPublicacoes" data-toggle="collapse" data-parent="#accordion" role="button" aria-expanded="false"><span>Pubicações</span><span class="sr-only">Abrir/fechar sub-menu</span><i class="fa fa-angle-down pull-right"></i></a>
+					<li class="panel"><a href="#menuPublicacoes" data-toggle="collapse" data-parent="#accordion" role="button" aria-expanded="false"><span><?php echo lang('menu_publications'); ?></span><span class="sr-only">Abrir/fechar sub-menu</span><i class="fa fa-angle-down pull-right"></i></a>
 						<ul class="navbar-custom-subnav collapse" id="menuPublicacoes">
 							<li><a target="_blank" href="http://repositorio.ufrn.br:8080/jspui/handle/123456789/11945/simple-search?location=123456789%2F11945&query=&rpp=100&sort_by=dc.date.issued_dt&order=DESC&etal=0&submit_search=Atualizar">Banco de dissertações e teses</a></li>
 							<li><a href="">Periódicos</a></li>
@@ -119,6 +119,7 @@
 		</div>
 	</nav>
 </header>
+<!--
 <div class="modal" id="myModal">
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">
@@ -132,3 +133,4 @@
 		</div>
 	</div>
 </div>
+-->
