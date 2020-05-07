@@ -16,11 +16,10 @@ class Noticias_anpae extends MY_Controller {
 			$titulo = $this->input->get('titulo');
 			if ($titulo) {
 				$data['noticias_anpae'] = $this->noticias_anpae_model->search($titulo, $config['per_page'], ($page - 1) * $config['per_page']);
-				$config['suffix'] = '&titulo=' . $titulo;
-				$config['total_rows'] = count($data['noticias_anpae']);
+				$config['base_url'] .= '?titulo=' . $titulo;
+				$config['total_rows'] = count($this->noticias_anpae_model->search($titulo));
 			} else {
 				$data['noticias_anpae'] = $this->noticias_anpae_model->get(array(), $config['per_page'], ($page - 1) * $config['per_page']);
-				$config['suffix'] = '';
 				$config['total_rows'] = $this->noticias_anpae_model->get_count();
 			}
 

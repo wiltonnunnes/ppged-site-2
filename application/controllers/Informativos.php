@@ -16,11 +16,10 @@ class Informativos extends MY_Controller {
 			$titulo = $this->input->get('titulo');
 			if ($titulo) {
 				$data['informativos'] = $this->informativos_model->search($titulo, $config['per_page'], ($page - 1) * $config['per_page']);
-				$config['suffix'] = '&titulo=' . $titulo;
+				$config['base_url'] .= '?titulo=' . $titulo;
 				$config['total_rows'] = count($this->informativos_model->search($titulo));
 			} else {
 				$data['informativos'] = $this->informativos_model->get(array(), $config['per_page'], ($page - 1) * $config['per_page']);
-				$config['suffix'] = '';
 				$config['total_rows'] = $this->informativos_model->get_count();
 			}
 
