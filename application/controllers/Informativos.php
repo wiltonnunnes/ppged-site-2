@@ -9,7 +9,7 @@ class Informativos extends MY_Controller {
 	public function index($id = NULL) {
 		if (is_null($id)) {
 			$config['base_url'] = site_url('informativos');
-			//$config['total_rows'] = $this->informativos_model->get_count();
+			$config['total_rows'] = $this->informativos_model->get_count();
 			$config['per_page'] = 4;
 
 			$page = ($this->input->get('page')) ?: 1;
@@ -17,7 +17,7 @@ class Informativos extends MY_Controller {
 			if ($titulo) {
 				$data['informativos'] = $this->informativos_model->search($titulo, $config['per_page'], ($page - 1) * $config['per_page']);
 				$config['suffix'] = '&titulo=' . $titulo;
-				$config['total_rows'] = count($data['informativos']);
+				$config['total_rows'] = count($this->informativos_model->search($titulo));
 			} else {
 				$data['informativos'] = $this->informativos_model->get(array(), $config['per_page'], ($page - 1) * $config['per_page']);
 				$config['suffix'] = '';

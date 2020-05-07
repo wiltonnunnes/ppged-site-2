@@ -9,16 +9,21 @@ class Eventos extends MY_Controller {
 	public function index($id = NULL) {
 		if (is_null($id)) {
 			$config['base_url'] = base_url('index.php/eventos');
-			$config['total_rows'] = $this->eventos_model->get_count();
 			$config['per_page'] = 10;
 
-			$this->pagination->initialize($config);
-
-			$data['links'] = $this->pagination->create_links();
-
 			$page = ($this->input->get('page')) ?: 1;
-			$str = 
-			$data['eventos'] = $this->eventos_model->get(array(), $config['per_page'], ($page - 1) * $config['per_page']);
+			$str = $this->input->get('titulo');
+			if(is_null($str)) {
+				$data['eventos'] = $this->eventos_model->get(array(), $config['per_page'], ($page - 1) * $config['per_page']);
+				$config['total_rows'] = $this->eventos_model->get_count();
+			} else {
+				$data['eventos'] = $this->eventos_model->search($str, $config['per_page'], ($page - 1) * $config['per_page']);
+				$config['base_url'] .= '?titulo=' . $str;
+				$config['total_rows'] = count($this->eventos_model->search($str));
+			}
+
+			$this->pagination->initialize($config);
+			$data['links'] = $this->pagination->create_links();
 
 			$this->load->view('templates/header');
 			if ($this->is_logged_in())
