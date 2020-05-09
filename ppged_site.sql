@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 06-Mar-2020 às 18:10
+-- Generation Time: 09-Maio-2020 às 00:18
 -- Versão do servidor: 5.5.56-MariaDB
 -- PHP Version: 5.4.16
 
@@ -68,7 +68,7 @@ CREATE TABLE IF NOT EXISTS `editais` (
   `titulo` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `arquivo` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `data` date DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `editais`
@@ -96,9 +96,10 @@ INSERT INTO `editais` (`edital_id`, `titulo`, `arquivo`, `data`) VALUES
 (24, 'EDITAL N&deg; 04/2019 &ndash; REINGRESSO - PPGED/UFRN', 'Edital - Reingresso 2019.2.pdf', '2019-07-15'),
 (25, 'EDITAL N&ordm; 05/2019 &ndash; PROCESSO SELETIVO 2020 PPGEd', 'Edital retificado 23.07.19.pdf', '2019-07-11'),
 (26, 'EDITAL N&deg; 06/2019 &ndash; REINGRESSO - PPGED/UFRN', 'Edital - Reingresso 2020.1.pdf', '2020-01-07'),
-(27, 'EDITAL N&deg; 07/2019 &ndash; MUDAN&Ccedil;A DE N&Iacute;VEL - PPGED/UFRN', 'Edital - MudanÃ§a de NÃ­vel 2020.1.pdf', '2020-01-07'),
+(27, 'EDITAL N&deg; 07/2019 &ndash; MUDAN&Ccedil;A DE N&Iacute;VEL - PPGED/UFRN', 'Edital - Mudan&ccedil;a de N&iacute;vel 2020.1.pdf', '2020-01-07'),
 (28, 'EDITAL N&deg; 01/2020 - CADASTRAMENTO PARA CANDIDATOS APROVADOS NA SELE&Ccedil;&Atilde;O PARA MESTRADO/DOUTORADO EM EDUCA&Ccedil;&Atilde;O COM INGRESSO EM 2020.1 - PPGEd/UFRN', 'Edital de Cadastramento 2020.pdf', '2020-02-04'),
-(29, 'EDITAL N&ordm; 02/2020 - CONCESS&Atilde;O DE BOLSAS PARA ALUNOS DE MESTRADO E DOUTORADO - PPGEd/UFRN', 'Edital_bolsas_2020_versÃ£o final.pdf', '2020-02-14');
+(29, 'EDITAL N&ordm; 02/2020 - CONCESS&Atilde;O DE BOLSAS PARA ALUNOS DE MESTRADO E DOUTORADO - PPGEd/UFRN', 'Edital_bolsas_2020_versÃ£o final.pdf', '2020-02-14'),
+(30, 'EDITAL N&ordm; 03/2020 - Chamada interna ao PPGEd para apoio &agrave; publica&ccedil;&atilde;o de livros 2020', 'Edital PPGEd - apoio aÌ€ publicacÌ§aÌƒo - Atualizado3.pdf', '2020-04-08');
 
 -- --------------------------------------------------------
 
@@ -115,7 +116,7 @@ CREATE TABLE IF NOT EXISTS `eventos` (
   `descricao` text CHARACTER SET latin1,
   `status` tinyint(1) NOT NULL DEFAULT '0',
   `cartaz` varchar(255) COLLATE utf8_bin DEFAULT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=462 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=MyISAM AUTO_INCREMENT=463 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Extraindo dados da tabela `eventos`
@@ -566,7 +567,8 @@ INSERT INTO `eventos` (`evento_id`, `nome_evento`, `data`, `local`, `entidade_or
 (458, 'DEFESA DE DISSERTA&Ccedil;&Atilde;O | VL&Aacute;DIA MARIA EUL&Aacute;LIO RAPOSO FREIRE PIRES', '2020-03-04', 'Audit&oacute;rio 02 do PPGEd - NEPSA II', 'PPGED', '', 0, 'Cartaz - Vladia.pdf'),
 (459, 'DEFESA DE DISSERTA&Ccedil;&Atilde;O | LUANA KAREN DE LIRA MONTEIRO', '2020-03-06', 'Multimeios 01 - CE', 'PPGED', '', 0, 'Cartaz - Luana.pdf'),
 (460, 'DEFESA DE DISSERTA&Ccedil;&Atilde;O | YRAGUACY ARAUJO ALMEIDA DE SOUZA', '2020-02-29', 'Multimeios 01 - CE', 'PPGED', '', 0, 'Cartaz - Yraguacy.pdf'),
-(461, 'DEFESA DE TESE | LUSIA MARY ROLEMBERG MENACHO', '2020-03-06', 'Audit&oacute;rio 02 do PPGEd - NEPSA II', 'PPGED', '', 0, 'Cartaz - Lusia.pdf');
+(461, 'DEFESA DE TESE | LUSIA MARY ROLEMBERG MENACHO', '2020-03-06', 'Audit&oacute;rio 02 do PPGEd - NEPSA II', 'PPGED', '', 0, 'Cartaz - Lusia.pdf'),
+(462, 'XXV EPEN - ncontro de Pesquisa Educacional do Nordeste - Reuni&atilde;o Cient&iacute;fica Regional da ANPEd', '2020-11-04', 'Faculdade de Educa&ccedil;&atilde;o da UFBA', 'PPGE/UFBA, FACED/UFBA e MPED/UFBA', '', 0, 'IMG-20200413-WA0004.jpg');
 
 -- --------------------------------------------------------
 
@@ -627,7 +629,7 @@ CREATE TABLE IF NOT EXISTS `informativos` (
   `data` date NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '0',
   `imagem` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=100 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=105 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `informativos`
@@ -713,11 +715,16 @@ INSERT INTO `informativos` (`informativo_id`, `titulo`, `categoria`, `texto`, `d
 (92, 'Divulgado Edital de Cadastramento para os Aprovados na Sele&ccedil;&atilde;o para Aluno Regular', 'not&iacute;cia', '<p>Foi divulgado o&nbsp;<strong>EDITAL </strong><strong>N&deg; 01/2020 - </strong><strong>CADASTRAMENTO PARA CANDIDATOS APROVADOS NA SELE&Ccedil;&Atilde;O PARA MESTRADO/DOUTORADO EM EDUCA&Ccedil;&Atilde;O COM INGRESSO EM 2020.1</strong><strong>&nbsp;- PPGEd/UFRN</strong></p>\r\n\r\n<p>Acesse no Menu DOCUMENTOS &gt;&gt; <a href="http://ppged.ufrn.br/editais.php">EDITAIS</a></p>\r\n', '2020-02-04', 0, NULL),
 (93, 'Formul&aacute;rio de Inscri&ccedil;&atilde;o - Alunos Especiais 2020.1', 'not&iacute;cia', '<p style="text-align:justify">Estar&aacute; aberta a&nbsp;<strong>inscri&ccedil;&atilde;o&nbsp;</strong>para&nbsp;<strong>Alunos Especiais</strong>&nbsp;nas vagas ofertadas no per&iacute;odo 2020.1, impreterivelmente, no&nbsp;<strong>per&iacute;odo de 13 a&nbsp;14 de fevereiro de 2020, por meio de formul&aacute;rio dispon&iacute;vel no link abaixo</strong>. Qualquer inscri&ccedil;&atilde;o feita depois desse per&iacute;odo ser&aacute; considerada &quot;erro de sistema&quot; e n&atilde;o ser&aacute; considerada.</p>\r\n\r\n<p>O n&uacute;mero de vagas &eacute; limitado, considerando a estrutura f&iacute;sica dispon&iacute;vel para as aulas e os candidatos interessados s&atilde;o selecionados pelos professores das disciplinas.&nbsp;</p>\r\n\r\n<p>A lista de oferta de disciplinas que ter&atilde;o vagas para alunos especiais, constando a ementa, dia e hor&aacute;rio das aulas, bem como local, j&aacute; est&atilde;o dispon&iacute;veis no <a href="http://ppged.ufrn.br/informativos.php?informativo=VZlSXRFWwplYGpEWadEdXZFMaZVVB1TP">site do PPGEd</a>.</p>\r\n\r\n<p>A matr&iacute;cula do Aluno Especial em disciplina n&atilde;o constitui v&iacute;nculo efetivo com o PPGEd, nem como aluno da UFRN. No entanto, o desempenho nas disciplinas ser&aacute; registrado em hist&oacute;rico, podendo as disciplinas serem posteriormente aproveitadas no PPGEd e em alguns Programas de P&oacute;s-gradua&ccedil;&atilde;o, de acordo com as respectivas Resolu&ccedil;&otilde;es que tratam do tema.&nbsp;</p>\r\n\r\n<p><strong>IMPORTANTE 1</strong>: De acordo com a Resolu&ccedil;&atilde;o n&ordm; 197/2013 - CONSEPE, inciso II, par&aacute;grafo 4&ordm;, Art. 38, o aluno poder&aacute; permanecer na condi&ccedil;&atilde;o de aluno especial por no m&aacute;ximo 2 semestres, consecutivos ou n&atilde;o.</p>\r\n\r\n<p><strong>IMPORTANTE 2:</strong> O quadro de oferta de disciplinas poder&aacute; sofrer altera&ccedil;&atilde;o(&otilde;es) a qualquer tempo, podendo ter componente(s) exclu&iacute;da(s) ou substitu&iacute;da(s) sem aviso pr&eacute;vio, mesmo ap&oacute;s divulga&ccedil;&atilde;o de resultado.</p>\r\n\r\n<p><strong>IMPORTANTE 3: </strong>O sistema s&oacute; permite cadastrar alunos(as) que N&Atilde;O tenham v&iacute;nculos com outras P&oacute;s-Gradua&ccedil;&otilde;es. Caso voc&ecirc; seja aprovado para alguma disciplina, ter&aacute; que cancelar seu v&iacute;nculo com outros programas de p&oacute;s-gradua&ccedil;&atilde;o para receber sua matr&iacute;cula no PPGEd.</p>\r\n\r\n<p><strong>IMPORTANTE 4</strong>: O PPGEd n&atilde;o se responsabiliza por solicita&ccedil;&atilde;o de inscri&ccedil;&atilde;o n&atilde;o recebida por motivos de ordem t&eacute;cnica dos computadores, falhas de comunica&ccedil;&atilde;o, congestionamento das linhas de comunica&ccedil;&atilde;o, falhas de smartphone e aplicativo, bem como outros fatores que impossibilitem a transmiss&atilde;o dos dados.</p>\r\n\r\n<p style="text-align:justify">&nbsp;</p>\r\n\r\n<p style="text-align:justify">D&uacute;vidas sobre a sele&ccedil;&atilde;o dever&atilde;o ser encaminhadas para o e-mail do programa:&nbsp;<strong>ppged@ce.ufrn.br</strong></p>\r\n\r\n<p style="text-align:justify"><strong><a href="https://forms.gle/n9snEGpczNAJkxAd9">Link para o formul&aacute;rio de inscri&ccedil;&atilde;o</a> &gt;&gt;&gt;<a href="https://goo.gl/forms/mDb1GRc59tAEIBDW2" style="box-sizing: border-box; color: rgb(0, 90, 171); text-decoration-line: none; background-color: transparent; margin: 0px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">&nbsp;</a>&nbsp;(formul&aacute;rio dispon&iacute;vel somente a partir de 13/02/2020)</strong></p>\r\n', '2020-02-10', 0, NULL),
 (94, 'DIVULGADO EDITAL PARA CONCESS&Atilde;O DE BOLSAS PARA MESTRANDOS E DOUTORANDOS', 'not&iacute;cia', '<p>Foi divulgado o&nbsp;<strong>EDITAL&nbsp;N&deg; 02/2020 -&nbsp;CONCESS&Atilde;O DE BOLSAS PARA ALUNOS DE MESTRADO E DOUTORADO&nbsp;- PPGEd/UFRN</strong></p>\r\n\r\n<p>Acesse no Menu DOCUMENTOS &gt;&gt;&nbsp;<a href="http://ppged.ufrn.br/editais.php" style="box-sizing: border-box; color: rgb(0, 90, 171); text-decoration-line: none; background-color: transparent; margin: 0px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">EDITAIS</a></p>\r\n', '2020-02-14', 0, NULL),
-(95, 'Divulgado n&uacute;mero de matr&iacute;cula dos novos alunos regulares 2020.1', 'not&iacute;cia', '<p>Prezado(a)s,</p>\r\n\r\n<p>Conforme o&nbsp;<em>EDITAL N&deg; 01/2020 - CADASTRAMENTO PARA CANDIDATOS APROVADOS NA SELE&Ccedil;&Atilde;O PARA MESTRADO/DOUTORADO EM EDUCA&Ccedil;&Atilde;O COM INGRESSO EM 2020.1</em> - PPGEd/UFRN, foi divulgado o&nbsp;<strong><a href="https://drive.google.com/open?id=1w0iP33uo3xxgSPQrrLtfae6S3JfrmmeL">n&uacute;mero da matr&iacute;cula dos ingressantes 2020.1&nbsp;(mestrado e doutorado)</a> </strong>vinculados ao Programa de P&oacute;s-Gradua&ccedil;&atilde;o em Educa&ccedil;&atilde;o da Universidade Federal do Rio Grande do Norte.</p>\r\n\r\n<p>Segue tamb&eacute;m, as <a href="https://drive.google.com/open?id=1IZVvGnJ6uYnkuxRYxszJSf3Tk03CrjUG">INSTRU&Ccedil;&Otilde;ES SOBRE LOGIN NO SIGAA E MATR&Iacute;CULA EM DISCIPLINAS NO SEMESTRE</a>.&nbsp;</p>\r\n\r\nSejam muito bem-vindos!\r\n', '2020-02-22', 1, NULL),
-(96, 'DIVULGADO RESULTADO ALUNOS ESPECIAIS 2020.1', 'not&iacute;cia', '<p>Segue <a href="https://drive.google.com/open?id=1XFxCoRctjiRMNqk-46kTGzn9TP0-L-lq">aqui</a> a lista dos candidatos aprovados na sele&ccedil;&atilde;o para aluno especial do PPGEd 2020.1, bem como as instru&ccedil;&otilde;es de matr&iacute;cula.</p>\r\n', '2020-03-02', 1, NULL),
-(97, 'RELA&Ccedil;&Atilde;O DE ALUNOS CANDIDATOS &Agrave; BOLSA RETIFICADO', 'not&iacute;cia', '<p>Segue <a href="https://drive.google.com/open?id=1_aWV_fG-7Vpzx0JRXDTR028NkvHPVhas">AQUI </a>rela&ccedil;&atilde;o dos <strong>MESTRANDOS </strong>candidatos a Bolsa de 2019 e&nbsp;2020, bem como a rela&ccedil;&atilde;o de MESTRANDOS&nbsp;bolsistas que entregaram o relat&oacute;rio 2019.</p>\r\n\r\n<p>Segue <a href="https://drive.google.com/open?id=1F5Ejk2ebHmp9GzjAiKO1G7uJ2xXm6Lbl">AQUI </a>rela&ccedil;&atilde;o dos <strong>DOUTORANDOS </strong>candidatos a Bolsa de 2018 a 2020, bem como a rela&ccedil;&atilde;o de&nbsp;DOUTORANDOS bolsistas que entregaram o relat&oacute;rio 2019.</p>\r\n\r\n<p>Retificado em 04/03/2020.</p>\r\n', '2020-03-03', 1, NULL),
-(98, 'DIVULGADO RESULTADO REINGRESSO 2020.1', 'not&iacute;cia', '<p>Segue <a href="https://drive.google.com/open?id=1Ie9EDZC4jk3Ngrj6N76VCZfmSdjB0viG">aqui</a> a lista dos aprovados na sele&ccedil;&atilde;o de Reingresso 2020.1, regido pelo edital&nbsp;EDITAL N&deg; 06/2019-PPGED/UFRN.</p>\r\n', '2020-03-04', 1, NULL),
-(99, 'DIVULGADO RESULTADO MUDAN&Ccedil;A DE N&Iacute;VEL 2020.1', 'not&iacute;cia', '<p>Segue <a href="https://drive.google.com/open?id=1MGy1xHOaGFIw6mxb8qEv6NuQ-6fGH8ne">aqui</a> a lista dos aprovados no Processo&nbsp;Interno de Mudan&ccedil;a de n&iacute;vel do Mestrado para o Doutorado&nbsp;do Programa de P&oacute;s-Gradua&ccedil;&atilde;o em Educa&ccedil;&atilde;o da UFRN para o semestre 2020.1, regido pelo edital EDITAL N&deg; 07/2019-PPGED/UFRN.</p>\r\n', '2020-03-05', 1, NULL);
+(95, 'Divulgado n&uacute;mero de matr&iacute;cula dos novos alunos regulares 2020.1', 'not&iacute;cia', '<p>Prezado(a)s,</p>\r\n\r\n<p>Conforme o&nbsp;<em>EDITAL N&deg; 01/2020 - CADASTRAMENTO PARA CANDIDATOS APROVADOS NA SELE&Ccedil;&Atilde;O PARA MESTRADO/DOUTORADO EM EDUCA&Ccedil;&Atilde;O COM INGRESSO EM 2020.1</em> - PPGEd/UFRN, foi divulgado o&nbsp;<strong><a href="https://drive.google.com/open?id=1w0iP33uo3xxgSPQrrLtfae6S3JfrmmeL">n&uacute;mero da matr&iacute;cula dos ingressantes 2020.1&nbsp;(mestrado e doutorado)</a> </strong>vinculados ao Programa de P&oacute;s-Gradua&ccedil;&atilde;o em Educa&ccedil;&atilde;o da Universidade Federal do Rio Grande do Norte.</p>\r\n\r\n<p>Segue tamb&eacute;m, as <a href="https://drive.google.com/open?id=1IZVvGnJ6uYnkuxRYxszJSf3Tk03CrjUG">INSTRU&Ccedil;&Otilde;ES SOBRE LOGIN NO SIGAA E MATR&Iacute;CULA EM DISCIPLINAS NO SEMESTRE</a>.&nbsp;</p>\r\n\r\nSejam muito bem-vindos!\r\n', '2020-02-22', 0, NULL),
+(96, 'DIVULGADO RESULTADO ALUNOS ESPECIAIS 2020.1', 'not&iacute;cia', '<p>Segue <a href="https://drive.google.com/open?id=1XFxCoRctjiRMNqk-46kTGzn9TP0-L-lq">aqui</a> a lista dos candidatos aprovados na sele&ccedil;&atilde;o para aluno especial do PPGEd 2020.1, bem como as instru&ccedil;&otilde;es de matr&iacute;cula.</p>\r\n', '2020-03-02', 0, NULL),
+(97, 'RELA&Ccedil;&Atilde;O DE ALUNOS CANDIDATOS &Agrave; BOLSA RETIFICADO', 'not&iacute;cia', '<p>Segue <a href="https://drive.google.com/open?id=1_aWV_fG-7Vpzx0JRXDTR028NkvHPVhas">AQUI </a>rela&ccedil;&atilde;o dos <strong>MESTRANDOS </strong>candidatos a Bolsa de 2019 e&nbsp;2020, bem como a rela&ccedil;&atilde;o de MESTRANDOS&nbsp;bolsistas que entregaram o relat&oacute;rio 2019.</p>\r\n\r\n<p>Segue <a href="https://drive.google.com/open?id=1F5Ejk2ebHmp9GzjAiKO1G7uJ2xXm6Lbl">AQUI </a>rela&ccedil;&atilde;o dos <strong>DOUTORANDOS </strong>candidatos a Bolsa de 2018 a 2020, bem como a rela&ccedil;&atilde;o de&nbsp;DOUTORANDOS bolsistas que entregaram o relat&oacute;rio 2019.</p>\r\n\r\n<p>Retificado em 04/03/2020.</p>\r\n', '2020-03-03', 0, NULL),
+(98, 'DIVULGADO RESULTADO REINGRESSO 2020.1', 'not&iacute;cia', '<p>Segue <a href="https://drive.google.com/open?id=1Ie9EDZC4jk3Ngrj6N76VCZfmSdjB0viG">aqui</a> a lista dos aprovados na sele&ccedil;&atilde;o de Reingresso 2020.1, regido pelo edital&nbsp;EDITAL N&deg; 06/2019-PPGED/UFRN.</p>\r\n', '2020-03-04', 0, NULL),
+(99, 'DIVULGADO RESULTADO MUDAN&Ccedil;A DE N&Iacute;VEL 2020.1', 'not&iacute;cia', '<p>Segue <a href="https://drive.google.com/open?id=1MGy1xHOaGFIw6mxb8qEv6NuQ-6fGH8ne">aqui</a> a lista dos aprovados no Processo&nbsp;Interno de Mudan&ccedil;a de n&iacute;vel do Mestrado para o Doutorado&nbsp;do Programa de P&oacute;s-Gradua&ccedil;&atilde;o em Educa&ccedil;&atilde;o da UFRN para o semestre 2020.1, regido pelo edital EDITAL N&deg; 07/2019-PPGED/UFRN.</p>\r\n', '2020-03-05', 0, NULL),
+(100, 'Adiado resultado do processo para concess&atilde;o de Bolsas ', 'not&iacute;cia', '<p>A divulga&ccedil;&atilde;o do resultado do processo de sele&ccedil;&atilde;o de bolsas, regido EDITAL N&ordm; 02/2020 PARA CONCESS&Atilde;O DE BOLSAS PARA ALUNOSDE MESTRADO E DOUTORADO, foi adiado pela Coordena&ccedil;&atilde;o do PPGEd para o dia 10 de mar&ccedil;o de 2020.</p>\r\n', '2020-03-06', 0, NULL),
+(101, 'Resultado do processo para concess&atilde;o de Bolsas', 'not&iacute;cia', '<p>Segue <a href="https://drive.google.com/open?id=1rwI_-r1njc0S00L77cbIT_GAOs9uD5zz">aqui</a> o resultado do processo de sele&ccedil;&atilde;o de bolsas, regido EDITAL N&ordm; 02/2020 PARA CONCESS&Atilde;O DE BOLSAS PARA ALUNOS&nbsp; DE MESTRADO E DOUTORADO.</p>\r\n', '2020-03-10', 0, NULL),
+(102, 'Resultado sele&ccedil;&atilde;o de bolsista de apoio t&eacute;cnico', 'not&iacute;cia', '<p>Informamos que ap&oacute;s o processo de sele&ccedil;&atilde;o para bolsista de apoio t&eacute;cnico do PPGEd, a candidata selecionada foi a graduanda&nbsp;BRENDA GABRIELA DA SILVA MARTINS. Entretanto, o processo de contrata&ccedil;&atilde;o est&aacute; suspenso pela UFRN at&eacute; que a situa&ccedil;&atilde;o de funcionamento dos setores se normalize.</p>\r\n\r\n<p>Entraremos em contato assim que for poss&iacute;vel realizar a contrata&ccedil;&atilde;o.</p>\r\n\r\n<p>Agradecemos a todos(as) que participaram do processo seletivo.</p>\r\n', '2020-03-20', 0, NULL),
+(103, 'RESULTADO DO PROCESSO PARA CONCESS&Atilde;O DE BOLSAS - EXTRA', 'not&iacute;cia', '<p>Informamos que foi concedida pela CAPES 02 (duas) cotas extras para o Mestrado do PPGEd.&nbsp;Segue <a href="https://drive.google.com/open?id=1VCsg0Bef5Mq1hQBAns7Tn6nmz-HB7Sye">aqui</a> o resultado dessa distribui&ccedil;&atilde;o extra de bolsas, regido EDITAL N&ordm; 02/2020 PARA CONCESS&Atilde;O DE BOLSAS PARA ALUNOS&nbsp; DE MESTRADO E DOUTORADO.</p>\r\n', '2020-04-07', 0, NULL),
+(104, 'Edital Chamada interna ao PPGEd para apoio &agrave; publica&ccedil;&atilde;o de livros 2020', 'not&iacute;cia', '<p>Divulgado o edital para a chamada interna ao PPGEd para apoio &agrave; publica&ccedil;&atilde;o de livros para o ano de 2020</p>\r\n\r\n<p>Para acessar o edital v&aacute; para DOCUMENTOS &gt; EDITAIS ou clique no link abaixo.</p>\r\n\r\n<p><a href="http://ppged.ufrn.br/uploads/arquivos/editais/Edital%20PPGEd%20-%20apoio%20a%CC%80%20publicac%CC%A7a%CC%83o%20-%20Atualizado3.pdf">Edital</a></p>\r\n', '2020-04-08', 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -733,7 +740,7 @@ CREATE TABLE IF NOT EXISTS `noticias_anpae` (
   `data` date NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '0',
   `imagem` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=52 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=53 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `noticias_anpae`
@@ -769,6 +776,8 @@ INSERT INTO `noticias_anpae` (`noticia_id`, `titulo`, `categoria`, `texto`, `dat
 (48, ' Revista Conflu&ecirc;ncias Culturais', 'evento', '<p>Caros leitores,</p>\r\n\r\n<p>A revista Revista Conflu&ecirc;ncias Culturais acaba de publicar seu &uacute;ltimo n&uacute;mero, dispon&iacute;vel em <a href="http://periodicos.univille.br/index.php/RCCult">http://periodicos.univille.br/index.php/RCCult</a></p>\r\n\r\n<p>A Revista Conflu&ecirc;ncias Culturais &eacute; a nova vers&atilde;o da Revista UNIVILLE, cuja primeira edi&ccedil;&atilde;o foi publicada em novembro de 1995. Na &eacute;poca a Revista foi estruturada com um Comit&ecirc; Editorial interno e consultores externos e internos, indicados por &aacute;rea de atua&ccedil;&atilde;o e titula&ccedil;&atilde;o formal.</p>\r\n\r\n<p>Convidamos a navegar no sum&aacute;rio da revista para acessar os artigos e outros itens de seu interesse.&nbsp; Agradecemos seu interesse e apoio cont&iacute;nuo em nosso trabalho</p>\r\n', '2019-04-29', 0, NULL),
 (49, 'Lan&ccedil;amento do livro F&iacute;sica, Cultura &amp; ensino de ci&ecirc;ncias', 'evento', '<p>O lan&ccedil;amento do livro F&iacute;sica, Cultura &amp; ensino de ci&ecirc;ncias, ocorrer&aacute; na pr&oacute;xima ter&ccedil;a-feira, 25/6/2019, das 18:30 as 20:00 no Sagu&atilde;o do CTEC - Complexo Tecnol&oacute;gico de Engenharia da UFRN, em Natal.</p>\r\n', '2019-06-19', 0, NULL),
 (51, 'Livro Vozes de estudantes com defici&ecirc;ncia intelectual: constru&ccedil;&otilde;es indenit&aacut', 'evento', '<p>Lan&ccedil;amento do Livro &#39;Vozes de estudantes com defici&ecirc;ncia intelectual: constru&ccedil;&otilde;es indenit&aacute;rias e estigma&#39; e Paletra &#39;o protagonismo das pesquisa e na educa&ccedil;&atilde;o&#39; ministrada pelo Prof. Dr. D&eacute;cio Nascimento Guimar&atilde;es.</p>\n\n<p>Data: 27 de novembro de 2019</p>\n<p>Hora: 18:30 h</p>\n<p>Local: Audit&oacute;rio do Centro de Educa&ccedil;&atilde;o - UFRN</p>\n', '2019-11-20', 0, 'WhatsApp Image 2019-11-20 at 09.23.59.jpeg');
+INSERT INTO `noticias_anpae` (`noticia_id`, `titulo`, `categoria`, `texto`, `data`, `status`, `imagem`) VALUES
+(52, 'Defesa de Memorial: promo&ccedil;&atilde;o &agrave; Classe &ldquo;E&rdquo; &ndash; Titular', 'evento', '<p>Andr&eacute; Ferrer Pinto Martin</p>\r\n\r\n<p>Sexta-feira, 3 de abril de 2020, 14h</p>\r\n\r\n<p>Diante do contexto de isolamento social e em fun&ccedil;&atilde;o da Portaria n&ordm; 484/2020-R/UFRN, de 21/03/2020, da Instru&ccedil;&atilde;o Normativa n&ordm; 2/2020-PROGESP/UFRN, de 21/03/2020 e do Artigo 30 da Resolu&ccedil;&atilde;o 067/2017CONSEPE/UFRN, de 13 de junho de 2017, os interessados ter&atilde;o acesso ao evento por meio do link: <a href="https://join.skype.com/PDNtTJIzSjtv">https://join.skype.com/PDNtTJIzSjtv</a></p>\r\n\r\n<p>Basta seguir os seguinte passos (n&atilde;o &eacute; necess&aacute;rio ter o Skype instalado): 1) Ingressar como convidado; 2) Ingressar na chamada; 3) Permanecer com o microfone e a c&acirc;mera desabilitados.</p>\r\n\r\n<p>&nbsp;</p>\r\n', '2020-03-30', 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -1211,12 +1220,12 @@ ALTER TABLE `convenios`
 -- AUTO_INCREMENT for table `editais`
 --
 ALTER TABLE `editais`
-  MODIFY `edital_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=30;
+  MODIFY `edital_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=31;
 --
 -- AUTO_INCREMENT for table `eventos`
 --
 ALTER TABLE `eventos`
-  MODIFY `evento_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=462;
+  MODIFY `evento_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=463;
 --
 -- AUTO_INCREMENT for table `fale_conosco`
 --
@@ -1231,12 +1240,12 @@ ALTER TABLE `formularios`
 -- AUTO_INCREMENT for table `informativos`
 --
 ALTER TABLE `informativos`
-  MODIFY `informativo_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=100;
+  MODIFY `informativo_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=105;
 --
 -- AUTO_INCREMENT for table `noticias_anpae`
 --
 ALTER TABLE `noticias_anpae`
-  MODIFY `noticia_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=52;
+  MODIFY `noticia_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=53;
 --
 -- AUTO_INCREMENT for table `noticias_anpae_anexo`
 --
