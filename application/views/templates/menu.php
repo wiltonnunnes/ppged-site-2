@@ -79,7 +79,7 @@
 							<li><a href="<?php echo base_url('arquivos/CALENDARIO DE MATRICULA 2020.1.pdf'); ?>" target="_blank"><?php echo lang('menu_registration_calendar'); ?></a></li>
 						</ul>
 					</li>
-					<li class="panel"><a href="#menuIngresso" data-toggle="collapse" data-parent="#accordion" role="button" aria-expanded="false"><span>Formas de ingresso</span><span class="sr-only">Abrir/fechar sub-menu</span><i class="fa fa-angle-down pull-right"></i></a>
+					<li class="panel"><a href="#menuIngresso" data-toggle="collapse" data-parent="#accordion" role="button" aria-expanded="false"><span>Ingresso</span><span class="sr-only">Abrir/fechar sub-menu</span><i class="fa fa-angle-down pull-right"></i></a>
 						<ul class="navbar-custom-subnav collapse" id="menuIngresso">
 							<li><a href="">Aluno Regular</a></li>
 							<li><a href="">Aluno Especial</a></li>

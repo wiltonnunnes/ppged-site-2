@@ -7,32 +7,30 @@ class Publicacoes extends MY_Controller {
 	}
 
 	public function index($ano = NULL) {
-		if (is_null($ano)) {
-			/*
-			$config['base_url'] = site_url('publicacoes');
-			$config['total_rows'] = $this->publicacoes_model->get_count();
-			$config['per_page'] = 16;
+		/*
+		$config['base_url'] = site_url('publicacoes');
+		$config['total_rows'] = $this->publicacoes_model->get_count();
+		$config['per_page'] = 16;
 
-			$this->pagination->initialize($config);
+		$this->pagination->initialize($config);
 
-			$data['links'] = $this->pagination->create_links();
+		$data['links'] = $this->pagination->create_links();
 
-			$page = ($this->input->get('page')) ?: 1;
-			$data['publicacoes'] = $this->publicacoes_model->get(array(), $config['per_page'], ($page - 1) * $config['per_page']);
-			*/
-			$anos = $this->publicacoes_model->get_anos();
-			$data['publicacoes'] = $this->publicacoes_model->get(['ano' => $anos[0]]);
-			$data['anos'] = $anos;
+		$page = ($this->input->get('page')) ?: 1;
+		$data['publicacoes'] = $this->publicacoes_model->get(array(), $config['per_page'], ($page - 1) * $config['per_page']);
+		*/
+		$anos = $this->publicacoes_model->get_anos();
+		$ano_publicaoes = $this->input->post('ano_publicaoes');
+		if(is_null($ano_publicaoes))
+			$ano_publicaoes = $anos[0];
+		$data['publicacoes'] = $this->publicacoes_model->get(['ano' => $ano_publicaoes]);
+		$data['anos'] = $anos;
 
-			$this->load->view('templates/header');
-			$this->load->view('templates/menu');
-			$this->load->view('templates/inicio');
-			$this->load->view('publicacoes/index', $data);
-			$this->load->view('templates/footer');
-		} else {
-			$data['publicacoes'] = $this->publicacoes_model->get(array('ano' => $ano));
-			echo json_encode($data);
-		}
+		$this->load->view('templates/header');
+		$this->load->view('templates/menu');
+		$this->load->view('templates/inicio');
+		$this->load->view('publicacoes/index', $data);
+		$this->load->view('templates/footer');
 	}
 
 	public function adicionar() {
@@ -101,5 +99,10 @@ class Publicacoes extends MY_Controller {
 			$this->load->view('painel_controle/templates/footer');
 		} else
 			redirect('painel_controle');
+	}
+
+	public function get_publicacao() {
+		$publicacao = $this->publicacoes_model->get_by_id($this->input->get('publicacao_id'));
+		echo json_encode($publicacao);
 	}
 }

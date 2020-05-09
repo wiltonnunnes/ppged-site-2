@@ -60,15 +60,14 @@
                                 <!--<div class="card-body">-->
                             
                             <div class="thumbnail">
-                                <a href="#" data-toggle="modal" data-target="#professorDetails" data-id="<?php echo $publicacoes_item['publicacao_id']; ?>" class="modal-button">
+                                <a href="#" data-toggle="modal" data-target="#publicacaoDetails" data-id="<?php echo $publicacoes_item['publicacao_id']; ?>" class="modal-button">
+                                    
                                     <?php
-                                    $imageProperties = [
-                                        'src' => "https://via.placeholder.com/1024x768",
-                                        'style' => "width:100%"
-                                    ];
-                                    echo img($imageProperties);
+                                    $imgSrc = is_null($publicacoes_item['imagem']) ? 'images/publicacao_default.jpg' : 'uploads/publicacoes/' . $publicacoes_item['imagem'];
+                                    echo img(['src' => $imgSrc, 'style' => 'width:100%']);
                                     ?>
                                 </a>
+                                
                             </div>
                                   <!--  
                                 </div>
@@ -91,16 +90,20 @@
             </div>
 
             <div class="col-md-4 gedf-main hidden-xs">
-                <form class="form-inline mt-5 ml-3" action="<?php echo site_url('noticias'); ?>">
+                <form class="form-inline mt-5 ml-3" action="<?php echo site_url('publicacoes'); ?>" method="post">
                     <div class="input-group input-group-lg">
-                        <select class="form-control" id="ano-publicacao">
+                        <select class="form-control" name="ano_publicaoes">
                         <?php
                         foreach ($anos as $ano) {
-                            echo "<option>$ano</option>";
+                            echo "<option value='$ano'>$ano</option>";
                         }
                         ?>
                         </select>
-                        
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit" id="button-addon2">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -109,18 +112,40 @@
     </div>
 </section>
 
+<div class="modal" id="publicacaoDetails" tabindex="-1" role="dialog" aria-labelledby="professorDetailsLabel" aria-hidden="true" style="margin: auto;">
+  <div class="modal-dialog modal-dialog-centered modal-lg" style="background-color: transparent;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            &times;
+        </button>
+        <h4 class="modal-title text-primary"></h4>
+      </div>
+      <div class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
 <script type="text/javascript">
-    $('#ano-publicacao').change(function(){
-        var $option = $('#ano-publicacao option').filter(':selected');
+    $('#publicacaoDetails').on("show.bs.modal", function(event) {
+        var anchor = $(event.relatedTarget);
+        var id = anchor.data('id');
+
+        var modal = $(this);
 
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if(this.readyState == 4 && this.status == 200) {
-                var publicacoes = JSON.parse(this.responseText);
-                alert(typeof publicacoes);
+                var publicacao = JSON.parse(this.responseText);
+                modal.find('.modal-title').html(publicacao.referencia);               
+                modal.find('.modal-body').html(publicacao.resumo);
             }
         };
-        xmlhttp.open("GET", "<?php echo site_url(); ?>/publicacoes/" + $option.text(), true);
+        xmlhttp.open("GET", "publicacoes/get_publicacao?publicacao_id=" + id, true);
         xmlhttp.send();
     });
 </script>
