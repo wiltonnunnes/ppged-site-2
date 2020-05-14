@@ -14,6 +14,7 @@
 		echo link_tag('css/font-awesome.css');
 		echo link_tag('css/bootstrap3.4.css');
 		echo link_tag('fontawesome/css/all.css');
+		echo link_tag('css/modal.css');
 		?>
 
 		<style type="text/css" media="all">

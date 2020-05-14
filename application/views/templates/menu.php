@@ -47,7 +47,7 @@
 				</ul>
 				<ul class="nav navbar-custom-nav sub-itens" id="menuPesquisa">
 					<li class="divisor hidden-xs hidden-sm hidden-md"></li>
-					<li><a class="btn-search-menu" alt="Clique para" href="#" onclick="return false;" data-toggle="modal" data-target="#myModal"><i class="fa fa-search"></i><span class="hidden-xs hidden-sm hidden-md">Pesquisar</span></a></li>
+					<li><a class="btn-search-menu" alt="Clique para" href="#" onclick="return false;" data-toggle="modal" data-target="#search-form"><i class="fa fa-search"></i><span class="hidden-xs hidden-sm hidden-md">Pesquisar</span></a></li>
 				</ul>
 			</div>
 			<div class="navbar-custom-collapse collapse" id="idMenu">
@@ -64,7 +64,7 @@
 							<li><a href="">Colegiado</a></li>
 							<li><a href="">Infraestrutura</a></li>
 							<li><a href="">Bolsas</a></li>
-							<li><a href="">Convênios e cooperações</a></li>
+							<li><?php echo anchor('convenios_nacionais', lang('menu_national_agreements')); ?></li>
 						</ul>
 					</li>
 					<li class="panel"><a href="#menuDocumentos" data-toggle="collapse" data-parent="#accordion" role="button" aria-expanded="false"><span>Documentos</span><span class="sr-only">Abrir/fechar sub-menu</span><i class="fa fa-angle-down pull-right"></i></a>
@@ -119,13 +119,15 @@
 		</div>
 	</nav>
 </header>
-<!--
-<div class="modal" id="myModal">
-	<div class="modal-dialog modal-dialog-centered">
+<div class="modal" id="search-form" role="dialog">
+	<div class="modal-dialog modal-full">
 		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
 			<div class="modal-body">
-				<form class="form-inline w-100">
-					<i class="far fa-search"></i>
+				<form class="form-inline">
+					<i class="fa fa-search"></i>
 					<input type="text" class="form-control mr-sm-2" placeholder="Digite sua busca">
 					<button type="submit" class="btn btn-primary">Buscar</button>
 				</form>
@@ -133,4 +135,3 @@
 		</div>
 	</div>
 </div>
--->

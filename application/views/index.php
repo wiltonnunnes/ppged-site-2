@@ -26,7 +26,13 @@
 						echo anchor(array('noticias', $noticias_item['noticia_id']), $noticias_item['titulo'], 'class="blue-link"'); 
 						?>
 					</h2>
-					<p class="item-description">Além do uso em humanos, a nova medicação produzida pela UFRN pode ser utilizada no tratamento veterinário de equinos, bovinos e caprinos</p>
+					<p class="item-description">
+						<?php
+						$doc = new DOMDocument();
+						$doc->loadHTML($noticias_item['texto']);
+						echo character_limiter($doc->getElementsByTagName('p')->item(0)->textContent, 133);
+						?>
+					</p>
 				</div>
 			</div>
 		<?php endforeach ?>
@@ -154,18 +160,20 @@
 					</div>
 				</div>
 				<div class="col-lg-6 mbr-col-md-10">
-					<div class="wrap">
-						<div class="ico-wrap">
-							<span class="mbr-iconfont fa-globe fa"></span>
+					<a href="<?php echo site_url('publicacoes'); ?>">
+						<div class="wrap">
+							<div class="ico-wrap">
+								<span class="mbr-iconfont fa-globe fa"></span>
+							</div>
+							<div class="text-wrap vcenter">
+								<h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">Banco de publicações</h2>
+								<p class="mbr-fonts-style text1 mbr-text display-6">Contamos com a produção atuante dos professores e alunos. Temos também contribuições com dissertações e teses defendidas pelos alunos do PPGEd.</p>
+							</div>
 						</div>
-						<div class="text-wrap vcenter">
-							<h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">Banco de publicações</h2>
-							<p class="mbr-fonts-style text1 mbr-text display-6">Contamos com a produção atuante dos professores e alunos. Temos também contribuições com dissertações e teses defendidas pelos alunos do PPGEd.</p>
-						</div>
-					</div>
+					</a>
 				</div>
 				<div class="col-lg-6 mbr-col-md-10">
-					<a href="O Programa/linhaDePesquisa.php">
+					<a href="<?php echo site_url('pesquisas'); ?>">
 						<div class="wrap">
 							<div class="ico-wrap">
 								<span class="mbr-iconfont fa-search fa"></span>

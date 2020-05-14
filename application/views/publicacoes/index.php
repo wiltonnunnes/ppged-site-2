@@ -1,7 +1,7 @@
 <!-- Wil -->
 <section class="info-section pt-6 mt-5">
     <div class="container">
-        <div class="head-box">
+        <div class="head-box titulo-div">
             <h1>Publicações</h1>
         </div>
 
