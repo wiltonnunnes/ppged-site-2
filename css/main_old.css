@@ -366,32 +366,36 @@ h6 {
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 24px
+}
+
+h1.2x {
+    font-size: 44px
 }
 
 h2 {
-    font-size: 18px;
+    font-size: 18px
 }
 
 h3 {
-    font-size: 16px;
+    font-size: 16px
 }
 
 h4 {
-    font-size: 14px;
+    font-size: 14px
 }
 
 h5 {
-    font-size: 12px;
+    font-size: 12px
 }
 
 h6 {
-    font-size: 10px;
+    font-size: 10px
 }
 
 .white-link {
     color: #fff;
-    transition: all 250ms linear 0ms;
+    transition: all 250ms linear 0ms
 }
 
 .white-link:hover {
@@ -400,19 +404,19 @@ h6 {
 
 .blue-link {
     color: #164194;
-    transition: all 250ms linear 0ms;
+    transition: all 250ms linear 0ms
 }
 
 .blue-link:hover,
 .blue-link:focus {
-    color: #0095DB;
+    color: #0095DB
 }
 
 .blue-link[type='reset'] {
     color: #164194;
     background-color: #FFF;
     border: 0;
-    height: 33px;
+    height: 33px
 }
 
 .blue-link[type='reset']:hover {
@@ -1614,8 +1618,7 @@ button:active,
 }
 
 .aside-interno {
-    color: #353436;
-    margin-top: 28px !important;
+    color: #353436
 }
 
 .aside-interno h1,
@@ -1792,22 +1795,6 @@ button:active,
 
 .aside-interno .aside-tags header {
     margin-bottom: 15px
-}
-
-.aside-interno {
-    color: #353436;
-}
-
-#busca-modal.-clean,
-#busca-form.-clean {
-    padding: 0;
-    border-bottom: 0;
-    margin: 0;
-}
-
-#busca-modal,
-#busca-form {
-    background-color: initial;
 }
 
 #barra-brasil {
@@ -2306,7 +2293,7 @@ button:active,
 .navbar-custom-nav>li>a,
 .navbar-custom-nav>li>a:hover,
 .navbar-custom-nav>li>a:focus {
-    background-color: rgba(22, 65, 148, 0.95);
+    background-color: rgba(22, 65, 148, 0.95)!important;
 }
 
 @media only screen and (min-width: 992px) {
@@ -4343,19 +4330,17 @@ td.gsc-search-button input {
     margin-bottom: 0
 }
 
-.ver-mais {
+.sec-title .ver-mais {
     display: inline-block;
     font-weight: normal;
     color: #164194;
     line-height: 20px;
     padding-left: 10px;
     border-left: 1px solid #ddd;
-    min-width: 85px;
-    font-size: 13px !important;
-    text-decoration: none !important;
+    min-width: 85px
 }
 
-.ver-mais .fa {
+.sec-title .ver-mais .fa {
     margin-left: 5px
 }
 
@@ -4827,88 +4812,6 @@ img.aligncenter {
 .sec-eventos .evento-location,
 .sec-eventos .evento-time {
     margin-bottom: 0
-}
-
-.eventos-done {
-    padding: 30px 30px 0px 20px;
-    border: 1px solid #84ADC9;
-}
-
-.eventos-done h2 {
-    margin-left: 10px;
-    margin-bottom: 0;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 0;
-    line-height: 1.3;
-}
-
-.sec-eventos {
-    padding-bottom: 0px;
-}
-
-.sec-eventos {
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-.sec-eventos .evento {
-    display: flex;
-}
-
-.sec-eventos .evento-date {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -ms-flex: 0 1 60px;
-    flex: 0 1 60px;
-    -ms-flex-align: center;
-    align-items: center;
-    font-size: 30px;
-    font-weight: 300;
-    text-transform: uppercase;
-    line-height: 1.05;
-    align-items: center;
-}
-
-.sec-eventos .evento-date .day {
-    color: #164194;
-}
-
-.sec-eventos .evento-date .day,
-.sec-eventos .evento-date .month {
-    text-align: center;
-    width: 100%;
-    display: block;
-}
-
-.sec-eventos .evento-date .month {
-    font-size: 16px;
-    color: #353436;
-}
-
-.sec-eventos .evento-infos {
-    flex: 1;
-}
-
-.sec-eventos .evento-title {
-    font-size: 16px;
-    color: #164194;
-    margin-bottom: 5px;
-    font-weight: bold;
-    margin-top: 0;
-    line-height: 1.3;
-}
-
-.sec-eventos .evento-location,
-.sec-eventos .evento-time {
-    margin-bottom: 0;
-}
-
-.eventos-upcoming {
-    margin-bottom: 35px;
-    padding-left: 0px;
 }
 
 .sec-inovacao {

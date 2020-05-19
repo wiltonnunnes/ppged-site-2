@@ -1,5 +1,6 @@
 <?php
-$config['full_tag_open'] = '<ul class="pagination pagination-lg">';
+//$config['full_tag_open'] = '<ul class="pagination pagination-lg">';
+$config['full_tag_open'] = '<ul class="pagination">';
 $config['full_tag_close'] = '</ul>';
 //$config['attributes'] = array('class' => 'page-link');
 $config['num_tag_open'] = '<li>';

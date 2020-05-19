@@ -126,11 +126,12 @@
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
 			</div>
 			<div class="modal-body">
-				<form class="form-inline">
-					<i class="fa fa-search"></i>
-					<input type="text" class="form-control mr-sm-2" placeholder="Digite sua busca">
-					<button type="submit" class="btn btn-primary">Buscar</button>
-				</form>
+        <form class="form-flex-group -clean hidden-xs hidden-sm" id="busca-form" action="<?php echo site_url('noticias'); ?>">
+          <div class="form-group search"><i class="fa fa-search" aria-hidden="true"></i><input class="form-control" id="inputBuscarEvento" name="titulo" required="required" placeholder="Buscar Notícia">
+            <div class="has-error"><label class="error help-block" for="titulo"></label></div>
+          </div>
+          <button type="submit" class="btn btn-primary">Buscar</button>
+        </form>
 			</div>
 		</div>
 	</div>

@@ -6,3 +6,15 @@
   min-height: 100vh;
   min-width: 100vw;
 }
+
+.list-group-flush .list-group-item:first-child {
+  border-top: 0 !important; 
+}
+
+ol {
+  list-style-type: none;
+}
+
+#formularios > li {
+  border-bottom: 1px solid rgba(22, 65, 148, 0.2);
+}

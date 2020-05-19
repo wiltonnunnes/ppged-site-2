@@ -12,13 +12,13 @@ class Eventos extends MY_Controller {
 			$config['per_page'] = 10;
 
 			$page = ($this->input->get('page')) ?: 1;
-			$str = $this->input->get('titulo');
+			$str = $this->input->get('input_busca_evento');
 			if(is_null($str)) {
 				$data['eventos'] = $this->eventos_model->get(array(), $config['per_page'], ($page - 1) * $config['per_page']);
 				$config['total_rows'] = $this->eventos_model->get_count();
 			} else {
 				$data['eventos'] = $this->eventos_model->search($str, $config['per_page'], ($page - 1) * $config['per_page']);
-				$config['base_url'] .= '?titulo=' . $str;
+				$config['base_url'] .= '?input_busca_evento=' . $str;
 				$config['total_rows'] = count($this->eventos_model->search($str));
 			}
 
@@ -39,7 +39,8 @@ class Eventos extends MY_Controller {
 			if ($this->is_logged_in())
 				$this->load->view('templates/menuAdm');
 			else
-				$this->load->view('templates/menu');
+        $this->load->view('templates/menu');
+      $this->load->view('templates/inicio');
 			$this->load->view('eventos/evento', $data);
 			$this->load->view('templates/footer');
 		}
