@@ -307,7 +307,8 @@
 		<script src="<?php echo base_url('js/jquery.min.js');?>"></script>
 		<script src="<?php echo base_url('js/main.min.js');?>"></script>
 		<script src="<?php echo base_url('js/bootstrap.js');?>"></script>
-		<script src="<?php echo base_url('js/sideBar.js');?>"></script>
+    <script src="<?php echo base_url('js/sideBar.js');?>"></script>
+    <script src="<?php echo base_url('js/util.js');?>"></script>
 
 		<!-- Icone -->
 		<link rel="shortcut icon" href="<?php echo base_url('img/icon.ico'); ?>">
