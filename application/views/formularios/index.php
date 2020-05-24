@@ -13,21 +13,21 @@
         <!--<div class="panel-group" id="accordion">-->
         <ol id="formularios">
           <?php foreach($formularios as $formularios_item): ?>
-          <li>
+          <li class="item">
             <a href="#<?php echo $formularios_item['formularios_id']; ?>" data-toggle="collapse" class="blue-link">
-              <h2 class="evento-title">
+              <h2 class="item-title">
                 <?php echo $formularios_item['titulo']; ?>
                 <i class="fa fa-angle-down pull-right"></i>
               </h2>
             </a>
-            <ol id="<?php echo $formularios_item['formularios_id']; ?>" class="collapse">
-              <li><a href="#">
-                  <h3>pdf</h3>
+            <ul id="<?php echo $formularios_item['formularios_id']; ?>" class="collapse">
+              <li><a href="<?php echo base_url(['uploads', 'arquivos', 'formularios', 'pdf', $formularios_item['arquivo_pdf']]); ?>" target="_blank" class="sec-eventos">
+                  <h3 class="evento-title">pdf</h3>
                 </a></li>
-              <li><a href="#">
-                  <h3>docx</h3>
+              <li><a href="<?php echo base_url(['uploads', 'arquivos', 'formularios', 'docx', $formularios_item['arquivo_docx']]); ?>" class="sec-eventos">
+                  <h3 class="evento-title">docx</h3>
                 </a></li>
-            </ol>
+            </ul>
           </li>
 
           <?php endforeach; ?>

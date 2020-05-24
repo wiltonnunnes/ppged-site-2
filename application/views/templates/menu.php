@@ -69,7 +69,7 @@
 					</li>
 					<li class="panel"><a href="#menuDocumentos" data-toggle="collapse" data-parent="#accordion" role="button" aria-expanded="false"><span>Documentos</span><span class="sr-only">Abrir/fechar sub-menu</span><i class="fa fa-angle-down pull-right"></i></a>
 						<ul class="navbar-custom-subnav collapse" id="menuDocumentos">
-							<li><?php echo anchor('regimento', 'Regimento'); ?></li>
+							<li><a href="<?php echo base_url('arquivos/regimento/regimento_interno_2012.pdf'); ?>" target="_blank">Regimento</a></li>
 							<li><?php echo anchor('resolucoes', 'Resoluções'); ?></li>
 							<li><a href="https://drive.google.com/file/d/1_UAKSMdMwxNRnewEt3COJJPvDB99Dafj/view">Estrutura Curricular</a></li>
 							<li><?php echo anchor('formularios', 'Formulários'); ?></li>
@@ -89,13 +89,13 @@
 					</li>
 					<li class="panel"><a href="#menuEditais" data-toggle="collapse" data-parent="#accordion" role="button" aria-expanded="false"><span><?php echo lang('menu_notices'); ?></span><span class="sr-only">Abrir/fechar sub-menu</span><i class="fa fa-angle-down pull-right"></i></a>
 						<ul class="navbar-custom-subnav collapse" id="menuEditais">
-							<li><a href="">Seleção de aluno regular</a></li>
-							<li><a href="">Reingresso de aluno regular</a></li>
-							<li><a href="">Mudança de nivel</a></li>
-							<li><a href="">Bolsas</a></li>
-							<li><a href="">Publicações</a></li>
-							<li><a href="">Credenciamento Docente</a></li>
-							<li><a href="">Outros</a></li>
+							<li><?php echo anchor('editais', 'Seleção de aluno regular'); ?></li>
+							<li><?php echo anchor('editais', 'Reingresso de aluno regular'); ?></li>
+							<li><?php echo anchor('editais', 'Mudança de nivel'); ?></li>
+							<li><?php echo anchor('editais', 'Bolsas'); ?></li>
+							<li><?php echo anchor('editais', 'Publicações'); ?></li>
+							<li><?php echo anchor('editais', 'Credenciamento Docente'); ?></li>
+							<li><?php echo anchor('editais', 'Outros'); ?></li>
 						</ul>
 					</li>
 					<li class="panel"><a href="#menuEventos" data-toggle="collapse" data-parent="#accordion" role="button" aria-expanded="false"><span><?php echo lang('menu_events'); ?></span><span class="sr-only">Abrir/fechar sub-menu</span><i class="fa fa-angle-down pull-right"></i></a>
