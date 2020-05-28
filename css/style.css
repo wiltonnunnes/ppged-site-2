@@ -166,6 +166,7 @@ i.box-circle-solid {
     border-radius: 10px;
 }
 
+/*
 .text-underline-primary:before {
     content: "";
     position: absolute;
@@ -177,6 +178,7 @@ i.box-circle-solid {
     bottom: -15px;
     border-radius: 10px;
 }
+*/
 
 .text-underline-rb-primary:before {
     content: "";

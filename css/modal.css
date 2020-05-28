@@ -1,8 +1,8 @@
 #search-form .modal-dialog {
   width: 100vw;
-  height: 100vh;
   padding: 0;
   margin: 0;
+  min-height: 100vh;
 }
 
 #search-form .modal-dialog .modal-dialog .modal-content {
@@ -57,4 +57,26 @@ ol {
   border-left: 1px solid rgba(22,65,148,0.2);
   padding-left: 10px;
   margin-left: 8px;
+}
+
+.text-underline-primary a {
+  color: inherit;
+  position: relative;
+}
+
+.text-underline-primary a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.text-underline-primary a:hover:before, .text-underline-primary a:active:before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 4px;
+  left: 50%;
+  margin-left: -25px;
+  background: #004d95;
+  bottom: -15px;
+  border-radius: 10px;
 }
