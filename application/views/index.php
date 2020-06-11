@@ -11,7 +11,7 @@
         <div class="col-xs-12 col-sm-4 container-item">
           <div class="item">
             <figure class="img-cover-proportional item-img" style="cursor: pointer;">
-              <a class="item-tag white-link" title=""><?php echo $noticias_item['categoria']; ?></a>
+              <a class="item-tag white-link" title="" href="<?php echo site_url('noticias?categoria=' . $noticias_item['categoria']); ?>"><?php echo $noticias_item['categoria']; ?></a>
               <?php
 						$imgsrc = $noticias_item['imagem'] ? 'uploads/arquivos/noticias_anpae' . $noticias_item['imagem'] : "https://via.placeholder.com/1024x768";
 						echo img($imgsrc);
@@ -45,7 +45,7 @@
         <div class="col-xs-12 col-sm-4 container-item">
           <div class="item">
             <figure class="img-cover-proportional item-img" style="cursor: pointer;">
-              <a class="item-tag white-link" title=""><?php echo $noticias_item['categoria']; ?></a>
+              <a class="item-tag white-link" title="" href="<?php echo site_url('noticias?categoria=' . $noticias_item['categoria']); ?>"><?php echo $noticias_item['categoria']; ?></a>
               <?php
 						$imgsrc = $noticias_item['imagem'] ? 'uploads/arquivos/noticias_anpae' . $noticias_item['imagem'] : "https://via.placeholder.com/1024x768";
 						echo img($imgsrc);
@@ -79,7 +79,7 @@
         <div class="col-xs-12 col-sm-4 container-item">
           <div class="item">
             <figure class="img-cover-proportional item-img" style="cursor: pointer;">
-              <a class="item-tag white-link" title=""><?php echo $noticias_item['categoria']; ?></a>
+              <a class="item-tag white-link" title="" href="<?php echo site_url('noticias?categoria=' . $noticias_item['categoria']); ?>"><?php echo $noticias_item['categoria']; ?></a>
               <?php
 						$imgsrc = $noticias_item['imagem'] ? 'uploads/arquivos/noticias_anpae' . $noticias_item['imagem'] : "https://via.placeholder.com/1024x768";
 						echo img($imgsrc);

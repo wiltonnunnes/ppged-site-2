@@ -1,6 +1,3 @@
-
-
-<!-- Novo codigo -->
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-md-8 col-lg-9">
@@ -9,8 +6,8 @@
           <div class="box-search">
             <form class="form-flex-group -topsearch " id="busca-form">
               <div class="form-group search"><i class="fa fa-search" aria-hidden="true"></i><input class="form-control"
-                  name="titulo" id="filtroImprensa" required="required" placeholder="Buscar Notícia">
-                <div class="has-error"><label class="error help-block" id="cp_busca" for="titulo"></label>
+                  name="cp_buscarNoticia" id="filtroImprensa" required="required" placeholder="Buscar Eventos">
+                <div class="has-error"><label class="error help-block" id="cp_busca" for="cp_buscarNoticia"></label>
                 </div>
               </div>
             </form>
@@ -217,43 +214,47 @@
           </div>
         </div>
         <section class="space-bottom">
-          <h1>Notícias da ANPED / FORPRED</h1>
+          <h1>Eventos</h1>
           <p>Confira abaixo os eventos promovidos e/ou realizados pela UFRN.</p>
         </section>
-        <!--
         <section>
           <h2>Próximos Eventos</h2>
           <ul class="eventos-upcoming sec-eventos" id="upcoming-events-list">
             <p>Nenhum evento encontrado</p>
           </ul>
         </section>
-        -->
         <section>
-          <!--<h2>Eventos anteriores</h2>-->
-          <!--<ul class="sec-eventos" id="done-events-list">-->
+          <h2>Eventos anteriores</h2>
+          <ul class="sec-eventos" id="done-events-list">
             <div class="row">
-              <?php foreach($noticias_anpae as $noticias_anpae_item): ?>
-              <div class="col-xs-6 box-evento">
-                <!--<div class="evento">-->
-                  
-                  <div class="item">
-                    <h2 class="item-title">
+              <?php foreach($eventos as $eventos_item): ?>
+              <div class="col-xs-12 box-evento">
+                <div class="evento">
+                  <?php $date = date_create($eventos_item['data']); ?>
+                  <p class="evento-date">
+                    <span class="day"><?php echo date_format($date, 'j'); ?></span>
+                    <span class="month"><?php echo date_format($date, 'M'); ?></span>
+                  </p>
+                  <div class="evento-infos">
+                    <h3 class="evento-title">
                       <a class="blue-link"
-                        href="<?php echo site_url(['noticias', $noticias_anpae_item['noticia_id']]); ?>"><?php echo $noticias_anpae_item['titulo']; ?></a>
-                    </h2>
+                        href="<?php echo site_url(['eventos', $eventos_item['evento_id']]); ?>"><?php echo $eventos_item['nome_evento']; ?></a>
+                    </h3>
 
-                    <p class="item-date"><?php echo date_format(date_create($noticias_anpae_item['data']), 'd/m/Y'); ?>
+                    <p class="evento-location"><?php echo $eventos_item['local']; ?> </p>
+
+                    <p class="evento-time"><?php echo date_format($date, 'd/m/Y'); ?>
 
                     </p>
                   </div>
-                <!--</div>-->
+                </div>
               </div>
               <?php endforeach; ?>
 
 
 
             </div>
-          <!--</ul>-->
+          </ul>
           <nav class="text-center" aria-label="Page navigation">
             <!--
                             <ul class="pagination" id="done-events-pagination">
@@ -277,10 +278,10 @@
       <div class="aside-interna">
         <div class="aside-interno">
           <form class="form-flex-group -clean hidden-xs hidden-sm" id="busca-form"
-            action="<?php echo site_url('noticias'); ?>">
+            action="<?php echo site_url('eventos'); ?>">
             <div class="form-group search"><i class="fa fa-search" aria-hidden="true"></i><input class="form-control"
-                id="inputBuscarEvento" name="titulo" required="required" placeholder="Buscar Notícia">
-              <div class="has-error"><label class="error help-block" for="titulo"></label></div>
+                id="inputBuscarEvento" name="input_busca_evento" required="required" placeholder="Buscar Evento">
+              <div class="has-error"><label class="error help-block" for="input_busca_evento"></label></div>
             </div>
           </form>
           <section class="aside-calendar hidden-xs hidden-sm">

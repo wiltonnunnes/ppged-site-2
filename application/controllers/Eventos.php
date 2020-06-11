@@ -131,6 +131,19 @@ class Eventos extends MY_Controller {
 			$this->load->view('painel_controle/templates/footer');
 		} else
 			redirect('painel_controle');
-	}
+  }
+  
+  public function filtros() {
+    $config['base_url'] = site_url('eventos/filtros');
+		$config['per_page'] = 10;
+    $page = ($this->input->get('page')) ?: 1;
+    
+    $data['eventos'] = $this->eventos_model->get($this->input->get());
+    $this->load->view('templates/header');
+		$this->load->view('templates/menu');
+		$this->load->view('templates/inicio');
+		$this->load->view('eventos/eventos', $data);
+		$this->load->view('templates/footer');
+  }
 
 }
