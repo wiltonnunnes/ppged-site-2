@@ -2,7 +2,7 @@
   <div class="container">
     <div class="head-box text-center mb-5">
       <h2 class="title">MAIS DO PPEGd</h2>
-      <h6 class="text-underline-primary"><a href="#rowItens" data-toggle="tab">Notícias,</a> <a href="#rowItens2"
+      <h6 class="text-underline-primary" onclick="toggleLinks()"><a href="#rowItens" data-toggle="tab">Notícias,</a> <a href="#rowItens2"
           data-toggle="tab">eventos,</a> <a href="#rowItens3" data-toggle="tab">editais</a></h6>
     </div>
     <div class="tab-content">

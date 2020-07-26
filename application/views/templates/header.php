@@ -339,6 +339,21 @@
         });
     </script> 
     <!-- Calendario -->
+    <script>
+    $(document).ready(function() {
+      $('.text-underline-primary').click(function(event) {
+        if(this !== event.target) {
+          var anchors = $(this).children('a').toArray();
+          anchors.forEach(function(item, index) {
+            if(event.target === item)
+              item.classList.add("antes-do-link");
+            else
+              item.classList.remove("antes-do-link");
+          });
+        }
+      });
+    });
+    </script>
 	</head>
 	<body>
 

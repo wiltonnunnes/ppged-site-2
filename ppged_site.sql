@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 09-Maio-2020 às 00:18
+-- Generation Time: 22-Jun-2020 às 22:21
 -- Versão do servidor: 5.5.56-MariaDB
 -- PHP Version: 5.4.16
 
@@ -606,8 +606,8 @@ CREATE TABLE IF NOT EXISTS `formularios` (
 INSERT INTO `formularios` (`formularios_id`, `titulo`, `arquivo_docx`, `arquivo_pdf`) VALUES
 (11, 'Relatório do bolsista - 2019', 'Relatório do bolsista - 2019.doc', 'Relatório do bolsista - 2019.pdf'),
 (12, 'Modelo de relatório: Seminário de Formação Doutoral II', 'Relatório_seminário_de_formação_doutoral.doc', 'Relatório_seminário_de_formação_doutoral.pdf'),
-(14, 'Indicação de banca de defesa de tese', 'Formulário de Indicação de Banca - Doutorado4.doc', 'Formulário de Indicação de Banca - Doutorado4 - PDF.pdf'),
-(15, 'Indicação de banca de defesa de dissertação', 'Formulário de Indicação de Banca - Mestrado4.doc', 'Formulário de Indicação de Banca - Mestrado4 - PDF.pdf'),
+(14, 'Indicação de banca de defesa de tese', 'Formulário de Indicação de Banca - Doutorado (PANDEMIA).doc', 'Formulário de Indicação de Banca - Doutorado (PANDEMIA) - pdf.pdf'),
+(15, 'Indicação de banca de defesa de dissertação', 'Formulário de Indicação de Banca - Mestrado (PANDEMIA).doc', 'Formulário de Indicação de Banca - Mestrado (PANDEMIA) - pdf.pdf'),
 (16, 'Relatório de Prestação de Conta', 'Relatório de prestação de contas.doc', 'Relatório de prestação de contas.pdf'),
 (17, 'Aproveitamento de Disciplina', 'formulario_aproveitamento_disciplina.doc', 'formulario_aproveitamento_disciplina.pdf'),
 (19, 'Candidatura à Bolsa De Estudo', 'formulario_candidatura_bolsa_estudos.doc', 'formulario_candidatura_bolsa_estudos.pdf'),
@@ -629,7 +629,7 @@ CREATE TABLE IF NOT EXISTS `informativos` (
   `data` date NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '0',
   `imagem` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=105 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=106 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `informativos`
@@ -724,7 +724,8 @@ INSERT INTO `informativos` (`informativo_id`, `titulo`, `categoria`, `texto`, `d
 (101, 'Resultado do processo para concess&atilde;o de Bolsas', 'not&iacute;cia', '<p>Segue <a href="https://drive.google.com/open?id=1rwI_-r1njc0S00L77cbIT_GAOs9uD5zz">aqui</a> o resultado do processo de sele&ccedil;&atilde;o de bolsas, regido EDITAL N&ordm; 02/2020 PARA CONCESS&Atilde;O DE BOLSAS PARA ALUNOS&nbsp; DE MESTRADO E DOUTORADO.</p>\r\n', '2020-03-10', 0, NULL),
 (102, 'Resultado sele&ccedil;&atilde;o de bolsista de apoio t&eacute;cnico', 'not&iacute;cia', '<p>Informamos que ap&oacute;s o processo de sele&ccedil;&atilde;o para bolsista de apoio t&eacute;cnico do PPGEd, a candidata selecionada foi a graduanda&nbsp;BRENDA GABRIELA DA SILVA MARTINS. Entretanto, o processo de contrata&ccedil;&atilde;o est&aacute; suspenso pela UFRN at&eacute; que a situa&ccedil;&atilde;o de funcionamento dos setores se normalize.</p>\r\n\r\n<p>Entraremos em contato assim que for poss&iacute;vel realizar a contrata&ccedil;&atilde;o.</p>\r\n\r\n<p>Agradecemos a todos(as) que participaram do processo seletivo.</p>\r\n', '2020-03-20', 0, NULL),
 (103, 'RESULTADO DO PROCESSO PARA CONCESS&Atilde;O DE BOLSAS - EXTRA', 'not&iacute;cia', '<p>Informamos que foi concedida pela CAPES 02 (duas) cotas extras para o Mestrado do PPGEd.&nbsp;Segue <a href="https://drive.google.com/open?id=1VCsg0Bef5Mq1hQBAns7Tn6nmz-HB7Sye">aqui</a> o resultado dessa distribui&ccedil;&atilde;o extra de bolsas, regido EDITAL N&ordm; 02/2020 PARA CONCESS&Atilde;O DE BOLSAS PARA ALUNOS&nbsp; DE MESTRADO E DOUTORADO.</p>\r\n', '2020-04-07', 0, NULL),
-(104, 'Edital Chamada interna ao PPGEd para apoio &agrave; publica&ccedil;&atilde;o de livros 2020', 'not&iacute;cia', '<p>Divulgado o edital para a chamada interna ao PPGEd para apoio &agrave; publica&ccedil;&atilde;o de livros para o ano de 2020</p>\r\n\r\n<p>Para acessar o edital v&aacute; para DOCUMENTOS &gt; EDITAIS ou clique no link abaixo.</p>\r\n\r\n<p><a href="http://ppged.ufrn.br/uploads/arquivos/editais/Edital%20PPGEd%20-%20apoio%20a%CC%80%20publicac%CC%A7a%CC%83o%20-%20Atualizado3.pdf">Edital</a></p>\r\n', '2020-04-08', 1, NULL);
+(104, 'Edital Chamada interna ao PPGEd para apoio &agrave; publica&ccedil;&atilde;o de livros 2020', 'not&iacute;cia', '<p>Divulgado o edital para a chamada interna ao PPGEd para apoio &agrave; publica&ccedil;&atilde;o de livros para o ano de 2020</p>\r\n\r\n<p>Para acessar o edital v&aacute; para DOCUMENTOS &gt; EDITAIS ou clique no link abaixo.</p>\r\n\r\n<p><a href="http://ppged.ufrn.br/uploads/arquivos/editais/Edital%20PPGEd%20-%20apoio%20a%CC%80%20publicac%CC%A7a%CC%83o%20-%20Atualizado3.pdf">Edital</a></p>\r\n', '2020-04-08', 0, NULL),
+(105, 'Novo formul&aacute;rio para Bancas de Defesa e Instru&ccedil;&otilde;es', 'not&iacute;cia', '<p>Prezados(as),</p>\r\n\r\n<p>Excepcionalmente, em fun&ccedil;&atilde;o da n&atilde;o realiza&ccedil;&atilde;o de atividades presenciais, conforme Resolu&ccedil;&atilde;o n&ordm; 23/2020 &ndash; CONSEPE/UFRN, as <strong>bancas dever&atilde;o ser realizadas por meio de plataformas de webconfer&ecirc;ncia</strong>, com TODOS os membros avaliadores e p&oacute;s-graduandos a dist&acirc;ncia. Excepcionalmente, para este per&iacute;odo, <strong>h&aacute; um novo formul&aacute;rio de indica&ccedil;&atilde;o de banca de defesa adaptado:</strong></p>\r\n\r\n<p>&bull;Formul&aacute;rio de Indica&ccedil;&atilde;o de banca de defesa de <strong>tese </strong>(<a href="https://drive.google.com/file/d/1xj7RhvZjoWIYJZ_mh0OAK3gGPz25CaIv/view?usp=sharing">PDF</a>) (<a href="https://docs.google.com/document/d/12u9jSwuMI8jqKsomgYCC0ZbDzp03Wv2I7-diKWboK8g/edit?usp=sharing">DOC</a>)</p>\r\n\r\n<p>&bull;Formul&aacute;rio de Indica&ccedil;&atilde;o de banca de defesa de <strong>disserta&ccedil;&atilde;o </strong>(<a href="https://drive.google.com/file/d/1M5mslAKjcgkWckI0gCC4FZoQR4h2MXua/view?usp=sharing">PDF</a>) (<a href="https://docs.google.com/document/d/1ZNxxmZRnuP2wbib1kI4YYzKs9O_b6JBXi6qq9f35EI8/edit?usp=sharing">DOC</a>)</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Segue tamb&eacute;m, <a href="https://drive.google.com/file/d/1q2FidkdT_JLGrCcE1Ml6EPDjCTCbpaXF/view?usp=sharing">Of&iacute;cio</a>, orienta&ccedil;&otilde;es para cadastro e realiza&ccedil;&atilde;o de bancas de defesa durante o Per&iacute;odo de suspens&atilde;o das aulas e atividades presenciais em decorr&ecirc;ncia da Pandemia do novo coronav&iacute;rus - covid-19.</p>\r\n', '2020-06-19', 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -854,7 +855,7 @@ INSERT INTO `professores` (`professor_id`, `nome`, `lattes`, `sigaa`, `titulo`, 
 (5, 'Andr&eacute; Ferrer Pinto Martins', 'Link Lattes;http://lattes.cnpq.br/2557880242678680 ', 'http://www.sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=1451196', 'Doutor', 'aferrer34@yahoo.com.br ', NULL, 17),
 (6, 'Ant&ocirc;nio Bas&iacute;lio Novaes Thomaz de Menezes', 'Link Lattes;http://lattes.cnpq.br/5195640047312319 ', 'http://www.sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=1149638', 'Doutor', 'gpfe@ufrnet.br', NULL, 21),
 (7, 'Antonio Cabral Neto', 'http://lattes.cnpq.br/2272273005907974 ', '', 'Doutor', 'cabraln@ufrnet.br', NULL, 22),
-(72, 'Avelino Aldo de Lima Neto', 'http://lattes.cnpq.br/3231870235953025', '', 'Mestre', 'ave.neto@hotmail.com', '0000-00-00', 18),
+(72, 'Avelino Aldo de Lima Neto', 'http://lattes.cnpq.br/3231870235953025', '', 'Doutor', 'ave.neto@hotmail.com', '0000-00-00', 18),
 (71, 'Josineide Silveira de Oliveira', 'http://lattes.cnpq.br/5439210347544379', '', 'Doutor', 'josilveira02@gmail.com', '0000-00-00', NULL),
 (11, 'Betania Leite Ramalho', 'http://lattes.cnpq.br/1326690619078211 ', '', 'Doutor', 'betania.ramalho@terra.com.br ', NULL, 20),
 (12, 'Claudianny Amorim Noronha', 'http://lattes.cnpq.br/3258090174478169 ', '', 'Doutor', 'claunoronha@ufrnet.br', NULL, 17),
@@ -901,10 +902,10 @@ INSERT INTO `professores` (`professor_id`, `nome`, `lattes`, `sigaa`, `titulo`, 
 (54, 'Terezinha Petr&uacute;cia da N&oacute;brega', 'http://lattes.cnpq.br/6743881635494941 ', 'http://www.sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=1049922', 'Doutor', 'pnobrega@ufrnet.br', NULL, 18),
 (55, 'Walter Pinheiro Barbosa Junior', 'http://lattes.cnpq.br/7532911538772143', 'http://www.sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=3280986', 'Doutor', 'walterjrnatal@hotmail.com', NULL, 22),
 (61, 'Josivania Marisa Dantas', 'http://lattes.cnpq.br/6685565063970044', 'https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=1630751', 'Doutor', 'josivaniamd@yahoo.com.br', '0000-00-00', 17),
-(75, 'Gessica Fabiely Fonseca', 'http://lattes.cnpq.br/2836927327702138', 'https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=3144003', 'Mestre', 'GESSICAFABIELY@HOTMAIL.COM', '0000-00-00', NULL),
+(75, 'Gessica Fabiely Fonseca', 'http://lattes.cnpq.br/2836927327702138', 'https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=3144003', 'Doutor', 'GESSICAFABIELY@HOTMAIL.COM', '0000-00-00', NULL),
 (76, 'Flavia Roldan Viana', 'http://lattes.cnpq.br/4756646407294958', 'https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=2313711', 'Doutor', 'flaviarviana.ufrn@gmail.com', '0000-00-00', NULL),
-(77, 'Eugenia Maria Dantas', 'http://lattes.cnpq.br/6296149707446296', 'https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=6350736', 'Mestre', 'eugeniadantas@yahoo.com.br', '0000-00-00', NULL),
-(78, 'Maria Carmem Freire Diogenes Rego', 'http://lattes.cnpq.br/9793207619191846', 'https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=349111', 'Mestre', 'camemrego@ufrnet.br', '0000-00-00', NULL),
+(77, 'Eugenia Maria Dantas', 'http://lattes.cnpq.br/6296149707446296', 'https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=6350736', 'Doutor', 'eugeniadantas@yahoo.com.br', '0000-00-00', NULL),
+(78, 'Maria Carmem Freire Diogenes Rego', 'http://lattes.cnpq.br/9793207619191846', 'https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=349111', 'Doutor', 'camemrego@ufrnet.br', '0000-00-00', NULL),
 (79, 'Allyson Carvalho De Araujo', 'http://lattes.cnpq.br/3443942683481696', 'https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=1645961', 'Doutor', 'allyssoncarvalho@hotmail.com', '0000-00-00', NULL),
 (80, 'Rosie Marie Nascimento De Medeiros', 'http://lattes.cnpq.br/4739820420408872', 'https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=1672476', 'Doutor', 'marie.medeiros@gmail.com', '0000-00-00', NULL),
 (81, 'Andreia Da Silva Quintanilha Sousa', 'http://lattes.cnpq.br/9086814725183565', 'https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=6396421', 'Doutor', 'andreia_quintanilha_sousa@hotmail.com', '0000-00-00', NULL);
@@ -1240,7 +1241,7 @@ ALTER TABLE `formularios`
 -- AUTO_INCREMENT for table `informativos`
 --
 ALTER TABLE `informativos`
-  MODIFY `informativo_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=105;
+  MODIFY `informativo_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=106;
 --
 -- AUTO_INCREMENT for table `noticias_anpae`
 --

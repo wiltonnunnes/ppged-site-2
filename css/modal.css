@@ -69,7 +69,7 @@ ol {
   color: inherit;
 }
 
-.text-underline-primary a:hover:before, .text-underline-primary a:active:before {
+.text-underline-primary a:hover:before, .text-underline-primary a:active:before, .styled-link:before {
   content: "";
   position: absolute;
   width: 50px;
@@ -79,4 +79,21 @@ ol {
   background: #004d95;
   bottom: -15px;
   border-radius: 10px;
+}
+
+.antes-do-link:before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 4px;
+  left: 50%;
+  margin-left: -25px;
+  background: #004d95;
+  bottom: -15px;
+  border-radius: 10px;
+}
+
+.antes-do-link:visited {
+  text-decoration: none;
+  color: black;
 }
