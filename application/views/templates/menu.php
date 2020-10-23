@@ -55,8 +55,8 @@
 					<h1> programa de pós-graduação em educação</h1>
 				</div>
 				<ul class="nav navbar-custom-nav" id="accordion"><span class="sr-only">Área do menu principal</span>
-					<li class="panel"><a href="#menuPrograma" data-toggle="collapse" data-parent="#accordion" role="button" aria-expanded="false"><span>Programa</span><span class="sr-only">Abrir/fechar sub-menu</span><i class="fa fa-angle-down pull-right"></i></a>
-						<ul class="navbar-custom-subnav collapse" id="menuPrograma">
+					<li class="panel"><a class="menu-button" href="#menuPrograma" data-toggle="collapse" data-parent="#accordion" role="button" aria-expanded="false"><span>Programa</span><span class="sr-only">Abrir/fechar sub-menu</span><i class="fa fa-angle-down pull-right"></i></a>
+						<ul class="navbar-custom-subnav collapse" id="menuPrograma"  data-parent="#accordion">
 							<li><?php echo anchor('apresentacao', lang('menu_about')); ?></li>
 							<li><a href="">Equipe administrativa</a></li>
 							<li><?php echo anchor('professores', lang('menu_teachers')); ?></li>
@@ -68,7 +68,7 @@
 						</ul>
 					</li>
 					<li class="panel"><a href="#menuDocumentos" data-toggle="collapse" data-parent="#accordion" role="button" aria-expanded="false"><span>Documentos</span><span class="sr-only">Abrir/fechar sub-menu</span><i class="fa fa-angle-down pull-right"></i></a>
-						<ul class="navbar-custom-subnav collapse" id="menuDocumentos">
+						<ul class="navbar-custom-subnav collapse" id="menuDocumentos" data-parent="#accordion">
 							<li><a href="<?php echo base_url('arquivos/regimento/regimento_interno_2012.pdf'); ?>" target="_blank">Regimento</a></li>
 							<li><?php echo anchor('resolucoes', 'Resoluções'); ?></li>
 							<li><a href="https://drive.google.com/file/d/1_UAKSMdMwxNRnewEt3COJJPvDB99Dafj/view">Estrutura Curricular</a></li>
@@ -80,7 +80,7 @@
 						</ul>
 					</li>
 					<li class="panel"><a href="#menuIngresso" data-toggle="collapse" data-parent="#accordion" role="button" aria-expanded="false"><span>Ingresso</span><span class="sr-only">Abrir/fechar sub-menu</span><i class="fa fa-angle-down pull-right"></i></a>
-						<ul class="navbar-custom-subnav collapse" id="menuIngresso">
+						<ul class="navbar-custom-subnav collapse" id="menuIngresso" data-parent="#accordion">
 							<li><a href="">Aluno Regular</a></li>
 							<li><a href="">Aluno Especial</a></li>
 							<li><a href="">Estágio pós-doutoral</a></li>
@@ -88,7 +88,7 @@
 						</ul>
 					</li>
 					<li class="panel"><a href="#menuEditais" data-toggle="collapse" data-parent="#accordion" role="button" aria-expanded="false"><span><?php echo lang('menu_notices'); ?></span><span class="sr-only">Abrir/fechar sub-menu</span><i class="fa fa-angle-down pull-right"></i></a>
-						<ul class="navbar-custom-subnav collapse" id="menuEditais">
+						<ul class="navbar-custom-subnav collapse" id="menuEditais" data-parent="#accordion">
 							<li><?php echo anchor('editais', 'Seleção de aluno regular'); ?></li>
 							<li><?php echo anchor('editais', 'Reingresso de aluno regular'); ?></li>
 							<li><?php echo anchor('editais', 'Mudança de nivel'); ?></li>
@@ -99,7 +99,7 @@
 						</ul>
 					</li>
 					<li class="panel"><a href="#menuEventos" data-toggle="collapse" data-parent="#accordion" role="button" aria-expanded="false"><span><?php echo lang('menu_events'); ?></span><span class="sr-only">Abrir/fechar sub-menu</span><i class="fa fa-angle-down pull-right"></i></a>
-						<ul class="navbar-custom-subnav collapse" id="menuEventos">
+						<ul class="navbar-custom-subnav collapse" id="menuEventos" data-parent="#accordion">
 							<li><?php echo anchor('eventos', 'Defesas de dissertações'); ?></li>
 							<li><?php echo anchor('eventos', 'Defesa de teses'); ?></li>
 							<li><?php echo anchor('eventos', 'Eventos Científicos'); ?></li>
@@ -107,7 +107,7 @@
 						</ul>
 					</li>
 					<li class="panel"><a href="#menuPublicacoes" data-toggle="collapse" data-parent="#accordion" role="button" aria-expanded="false"><span><?php echo lang('menu_publications'); ?></span><span class="sr-only">Abrir/fechar sub-menu</span><i class="fa fa-angle-down pull-right"></i></a>
-						<ul class="navbar-custom-subnav collapse" id="menuPublicacoes">
+						<ul class="navbar-custom-subnav collapse" id="menuPublicacoes" data-parent="#accordion">
 							<li><a target="_blank" href="http://repositorio.ufrn.br:8080/jspui/handle/123456789/11945/simple-search?location=123456789%2F11945&query=&rpp=100&sort_by=dc.date.issued_dt&order=DESC&etal=0&submit_search=Atualizar">Banco de dissertações e teses</a></li>
 							<li><a href="">Periódicos</a></li>
 							<li><a href="">Livros</a></li>

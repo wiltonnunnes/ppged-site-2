@@ -3,6 +3,7 @@
 <html>
 	<head>
 		<title>PPGED - Pograma de Pós Graduação em Educação</title>
+    <link rel='shortcut icon' href="<?php echo base_url(); ?>favicon.ico" type='image/x-icon' />
 		<meta name="viewport" content="width=device-width">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
@@ -353,6 +354,16 @@
         }
       });
     });
+    </script>
+    <script>
+    /*
+    $(document).ready(function() {
+      $('.menu-button').click(function(event) {
+        var id = $(this).next().attr("id");
+        $(`.collapse:not([id=${id}])`).collapse("hide");
+      });
+    });
+    */
     </script>
 	</head>
 	<body>

@@ -102,5 +102,32 @@ class Professores extends MY_Controller {
 	public function get_professor() {
 		$professor = $this->professores_model->get_by_id($this->input->get('professor_id'));
 		echo json_encode($professor);
-	}
+  }
+  
+  public function save_data_from_csv() {
+    $handle = fopen(base_url('arquivos/output.csv'), "r");
+    while ($line = fgetcsv($handle, 1000, ",")) {
+      $data[] = [
+        'id' => $line[0],
+        'nome' => $line[1],
+        'email' => $line[2],
+        'linha_de_pesquisa' => $line[3],
+        'sigaa' => $line[4],
+        'lattes' => $line[5]
+      ];
+    }
+    fclose($handle);
+    $professores = $this->professores_model->get();
+    foreach ($professores as $professor) {
+      $nome = $this->format_name($professor['nome']);
+    }
+    print_r($data);
+  }
+
+  private function format_name($name) {
+    while (strpos($name, "&") !== FALSE) {
+      str_replace(substr($name, strpos($name, "&"), 8), substr($name, strpos($name, "&") + 1, 1), $name);
+    }
+    return strtoupper($name);
+  }
 }
